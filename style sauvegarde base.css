@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins";
+    background-size: cover;
+    background-image: url(https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg);
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 2.5em 1em;
+}
+
+header .left,
+header .right {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    color:#adadad;
+    font-size: 2em;
+    display: flex;
+}
+
+header .left a,
+header .right a {
+    margin-right: 80px;
+}
+
+header .right .time {
+    color: white;
+    font-size: 2em;
+    font-weight: 100em;
+}
+
+#carousel {
+	position: relative;
+	height: 85%;
+}
+
+#carousel > div {
+	position: absolute;
+	transition: transform 0.4s, left 0.4s, opacity 0.4s, z-index 0s;
+	opacity: 1;
+}
+
+#carousel section img {
+	width: 175px;
+    border-radius: 30px;
+	transition: width 0.4s;
+    cursor: pointer;
+}
+
+#carousel .hideLeft {
+	left: -190px;
+	opacity: 0;
+}
+
+#carousel .hideLeft img {
+	width: 110px;
+}
+
+#carousel .hideRight {
+	left: 685px;
+	opacity: 0;
+}
+
+#carousel .hideRight img {
+	width: 110px;
+}
+
+#carousel .prev {
+	z-index: 5;
+	left: 80px;
+}
+
+#carousel .prev img {
+	width: 110px;
+}
+
+#carousel .prevLeftSecond {
+	z-index: 4;
+	left: -55px;
+}
+
+#carousel .prevLeftSecond img {
+	width: 110px;
+}
+
+#carousel .selected {
+	z-index: 1;
+	left: 215px;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#carousel .selected section img {
+    border: 3px solid transparent;
+    box-shadow: 0px 0px 0px 3px rgb(216, 216, 216);
+}
+
+#carousel .next {
+	z-index: 5;
+	left: 415px;
+}
+
+#carousel .next img {
+	width: 110px;
+}
+
+#carousel .nextRightSecond {
+	z-index: 4;
+	left: 550px;
+}
+
+#carousel .nextRightSecond img {
+	width: 110px;
+}
+
+#carousel .selected section span {
+	color:rgb(233, 233, 233);
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-left: 5px;
+    position: relative;
+    bottom: 30px;
+}
+
+#carousel :not(.selected) section span,
+#carousel :not(.selected) .game-info {
+    display:none;
+}
+
+#carousel .selected .game-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#carousel .selected .game-info .left h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 40px 0 40px 0;
+
+}
+
+#carousel .selected .game-info .left .button-left {
+    display: flex;
+}
+
+#carousel .selected .game-info .left .button-left a {
+    background-color: rgba(255, 255, 255, 0.088);
+    color: white;
+    font-size: 2em;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+#carousel .selected .game-info .left .button-left a:nth-child(1) {
+    padding: 10px 120px;
+
+}
+
+#carousel .selected .game-info .left .button-left a:nth-child(2) {
+    height: 65px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#carousel .selected .game-info .right .cover {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 0;
+}
+
+#carousel .selected .game-info .right .cover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to bottom, transparent 45%, #000 85%);
+}
+
+#carousel .selected .game-info .right .cover span {
+    z-index: 1;
+}
+
+#carousel .selected .game-info .right .cover span.complet {
+    color: white;
+    border: 2px solid white;
+    width: fit-content;
+    padding: 2px 8px;
+    margin-left: 17px;
+}
+
+#carousel .selected .game-info .right .cover span.update {
+    background-color: white;
+    color: #000;
+    width: fit-content;
+    font-weight: 700;
+    margin: 17px 0 17px 17px;
+    padding: 3px;
+    font-size: 0.9em;
+}
+
+#carousel .selected#un .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg);
+}
+
+#carousel .selected#deux .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg);
+}
+
+#carousel .selected#trois .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg);
+}
+
+#carousel .selected#quatre .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg);
+}
+
+#carousel .selected#cinq .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg);
+}
+
+#carousel .selected#six .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg);
+}
+
+#carousel .selected#sept .game-info .right .cover {
+    background-image: url(https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg);
+}

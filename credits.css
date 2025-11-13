@@ -1,0 +1,75 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Credits container */
+.credits-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Credits content */
+.credits {
+    text-align: center;
+    animation: scroll-up 20s linear infinite;
+}
+
+/* Scroll animation */
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Title style */
+.credits h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Paragraph style */
+.credits p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+
+#retour-btn-container {
+    position: fixed;
+    left: 20px;
+    bottom: 42px;
+    z-index: 1000;
+  }
+  
+  #retour-btn {
+    background-color: rgba(2, 2, 2, 0.519);
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #retour-btn:hover {
+    background-color: rgba(80, 80, 80, 0.938);
+  }
+  

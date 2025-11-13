@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PS5 Startup</title>
+    <link rel="stylesheet" href="playstation-lancement-style.css">
+</head>
+<body>
+    <div id="particle-container"></div>
+    <div class="ps5_startup">
+        <div class="controller">
+          <div id="loading-animation" class="hidden">
+    <span class="triangle" data-animate="false"></span>
+    <span class="circle" data-animate="false"></span>
+    <span class="cross" data-animate="false"></span>
+    <span class="square" data-animate="false"></span>
+    </div>
+          <a href="index.html" id="logo-link"><div id="ps5_button" class="ps_logo"></div></a>
+        </div>
+    </div>
+    <div class="text-container">
+        <p class="intro-text">Découvrez mon univers où technologie, fantasy et jeux vidéo se rencontrent. Étudiant en BUT Réseaux et Télécommunication, je suis à la recherche d'une alternance enrichissante. Venez donc explorer mon parcours et mes passions pour en savoir plus sur qui je suis et ce que je peux apporter.</p>
+    </div>
+    <script>
+
+      const particleContainer = document.getElementById('particle-container');
+
+      for (let i = 1; i <= 30; i++) { 
+          let particle = document.createElement('div');
+          particle.classList.add('particle');
+
+          let size = Math.random() * 5 + 5; // Taille entre 5 et 10
+          let opacity = Math.random() * 0.7; // Opacité entre 0 et 0.7
+          let x = Math.random() * 390; // Position x aléatoire
+          let y = Math.random() * 390; // Position y aléatoire
+          let z = Math.random() * 400; // Position z aléatoire
+
+          particle.style.cssText = `
+              width: ${size}px;
+              height: ${size}px;
+              opacity: ${opacity};
+              animation: particle-animation 60s infinite;
+              animation-delay: ${-i * 0.2}s;
+              background: white;
+              transform: translate3d(${x}vw, ${y}vh, ${z}px);
+          `;
+          particleContainer.appendChild(particle);
+      }
+      for (let i = 1; i <= 30; i++) {
+          let particle = document.createElement('div');
+          particle.classList.add('particle');
+
+          let size = Math.random() * 5 + 5; // Taille entre 5 et 10
+          let opacity = Math.random() * 0.7; // Opacité entre 0 et 0.7
+          let x = Math.random() * -390; // Position x aléatoire
+          let y = Math.random() * 390; // Position y aléatoire
+          let z = Math.random() * 400; // Position z aléatoire
+
+          particle.style.cssText = `
+              width: ${size}px;
+              height: ${size}px;
+              opacity: ${opacity};
+              animation: particle-animation 60s infinite;
+              animation-delay: ${-i * 0.2}s;
+              background: white;
+              transform: translate3d(${x}vw, ${y}vh, ${z}px);
+          `;
+          particleContainer.appendChild(particle);
+      }
+      for (let i = 1; i <= 30; i++) {
+          let particle = document.createElement('div');
+          particle.classList.add('particle');
+
+          let size = Math.random() * 5 + 5; // Taille entre 5 et 10
+          let opacity = Math.random() * 0.7; // Opacité entre 0 et 0.7
+          let x = Math.random() * -390; // Position x aléatoire
+          let y = Math.random() * -390; // Position y aléatoire
+          let z = Math.random() * 400; // Position z aléatoire
+
+          particle.style.cssText = `
+              width: ${size}px;
+              height: ${size}px;
+              opacity: ${opacity};
+              animation: particle-animation 60s infinite;
+              animation-delay: ${-i * 0.2}s;
+              background: white;
+              transform: translate3d(${x}vw, ${y}vh, ${z}px);
+          `;
+          particleContainer.appendChild(particle);
+      }
+      for (let i = 1; i <= 30; i++) {
+          let particle = document.createElement('div');
+          particle.classList.add('particle');
+
+          let size = Math.random() * 5 + 5; // Taille entre 5 et 10
+          let opacity = Math.random() * 0.7; // Opacité entre 0 et 0.7
+          let x = Math.random() * 390; // Position x aléatoire
+          let y = Math.random() * -390; // Position y aléatoire
+          let z = Math.random() * 400; // Position z aléatoire
+
+          particle.style.cssText = `
+              width: ${size}px;
+              height: ${size}px;
+              opacity: ${opacity};
+              animation: particle-animation 60s infinite;
+              animation-delay: ${-i * 0.2}s;
+              background: white;
+              transform: translate3d(${x}vw, ${y}vh, ${z}px);
+          `;
+          particleContainer.appendChild(particle);
+      }
+        
+    
+    </script>
+    <script>
+    const allElements = document.querySelectorAll('.ps5_startup span');
+
+    document.getElementById('ps5_button').addEventListener('click', function() {
+        // Afficher l'animation de chargement
+        document.getElementById('loading-animation').style.display = 'block';
+
+        // Délai de 4 secondes avant de changer de page
+        setTimeout(function() {
+            window.location.href = 'index.html'; // Rediriger vers la page index.html
+        }, 4000); // 4 secondes en millisecondes
+
+        // Lancer l'animation après un délai pour qu'elle s'affiche
+        setTimeout(function() {
+            animate(allElements);
+        }, 100);
+    });
+
+    const randomInterval = (() => {
+        const random = (min, max) => Math.random() * (max - min) + min;
+        return (callback, min, max) => {
+            const time = {
+                start: performance.now(),
+                total: random(min, max)
+            };
+            const tick = now => {
+                if (time.total <= now - time.start) {
+                    time.start = now;
+                    time.total = random(min, max);
+                    callback();
+                }
+                requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        };
+    })();
+
+    const getRandomElement = (elements) => {
+        return elements[Math.floor(Math.random()*elements.length)];
+    }
+
+    const animate = (elements) => {
+        const element = getRandomElement(elements);
+        element.setAttribute('data-animate', true);
+        setTimeout( () => {
+            element.removeAttribute('data-animate');
+        }, 1200);
+    }
+
+    randomInterval(() => animate(allElements), 1000, 3000);
+</script>
+</body>
+</html>
