@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civic Engagement – Bastien Labeste</title>
+  <link rel="stylesheet" href="Civic-Engagement.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Civic Engagement</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="Qui-suis-je.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+
+<main>
+  <!-- Intro section -->
+  <section class="intro-card">
+    <h2>Why CSR Matters in Engineering</h2>
+    <p>
+      Corporate Social Responsibility (CSR) is essential in engineering because our projects impact society, the environment, and future generations.
+      Integrating CSR principles ensures ethical, sustainable, and responsible innovation.
+    </p>
+  </section>
+
+  <!-- Event 1 -->
+  <section class="civic-section">
+    <div class="text">
+      <h2>King Kong Trial – 01/09/2025</h2>
+      <p>
+  <p><strong>Description:</strong> Participated in the King Kong trial, observing the judicial process.</p>
+  <p><strong>Risk:</strong> Minor | <strong>Mitigation:</strong> Followed all safety protocols.</p>
+      </p>
+    </div>
+    <div class="image">
+      <img src="KingKong.jpg" alt="King Kong Trial" style="height: 300px;width: 500px; object-fit: cover;" />
+    </div>
+  </section>
+
+  <!-- Event 2 -->
+  <section class="civic-section">
+    <div class="image">
+      <img src="clean-walk.jpg" alt="Clean Walk Toulouse" style="height: 300px;width: 500px; object-fit: cover;"/>
+    </div>
+    <div class="text">
+      <h2>Clean Walk – ENSEEIHT, Toulouse – 05/09/2025</h2>
+      <p>
+        <p><strong>Description:</strong> Took part in a local environmental clean-up initiative.</p>
+  <p><strong>Risk:</strong> Minor | <strong>Mitigation:</strong> Wore gloves and safety gear.</p>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Bastien Labeste – All rights reserved.</p>
+</footer>
+
+<div id="retour-btn-container">
+  <a href="index.html" id="retour-btn">Return</a>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+<script>
+  // Toggle du menu
+  $(document).ready(function() {
+    $('#menu-toggle').click(function(event) {
+      event.preventDefault();
+      $('#menu').slideToggle();
+    });
+  });
+
+  // Bouton scroll vers le haut
+  var mybutton = document.getElementById("myBtn");
+  window.onscroll = function() { scrollFunction() };
+  function scrollFunction() {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else { mybutton.style.display = "none"; }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+</body>
+</html>
