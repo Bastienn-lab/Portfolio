@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ressenti</title>
+  <link rel="stylesheet" href="ressenti_oxya.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>  
+    <nav> 
+      <div class="header-left">
+        <a href="#" id="menu-toggle" style="font-size:20px;font-weight:bold;">☰ Menu</a>
+        <ul id="menu" class="dropdown-menu">
+          <li><a href="missions_oxya.html">Missions</a></li>
+          <li><a href="ressenti_oxya.html">Ressenti</a></li>
+          <li><a href="competence_oxya.html">Compétences développées</a></li>
+          <li><a href="outils_oxya.html">Outils</a></li>
+          
+        </ul>
+      </div>
+      <div class="header-center">
+        <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" alt="Mail" style="height:40px;border-radius:50px;"></a>
+        <a href="http://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" alt="LinkedIn" style="height:40px;border-radius:50px;"></a>
+        <a href="https://instagram.com/bastienn.lab"><img src="insta-logo.png" alt="Instagram" style="height:40px;border-radius:50px;"></a>
+        <a href="./Bastien-Labeste_CV-2024.pdf" download><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" alt="CV" style="height:40px;border-radius:50px;"></a>
+      </div>
+      <div class="header-right">
+        <a href="competence_oxya.html" style="font-size:18px;font-weight:bold;">Prochaine Section →</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Laisser un espace sous le header -->
+ 
+
+  <!-- Trois containers seulement, sans display:none pour réserver leur place -->
+  <div class="container" id="first-container">
+    <div class="console"><code>
+      <p>
+        Bastien&gt; Mon alternance chez Oxya a été un véritable tremplin : défis techniques, maîtrise de SAP, Okta, SAM et Cockpit se sont mêlés à de forts apprentissages humains.  
+        Au cœur d’une équipe experte SAP, j’ai découvert la rigueur du support et la puissance de ces outils pour sécuriser et piloter les accès.
+      </p>
+    </code></div>
+  </div>
+
+  <div class="container" id="second-container">
+    <div class="console"><code>
+      <p>
+        Bastien&gt; Chaque ticket traité, chaque log analysé m’a permis de consolider mes compétences et de comprendre les enjeux de la cybersécurité en entreprise.  
+        Mais au-delà de la technique, c’est la collaboration et l’écoute qui m’ont le plus enrichi, forgeant ma rigueur et mon sens du service.
+      </p>
+    </code></div>
+  </div>
+
+  <div class="container" id="third-container">
+    <div class="console"><code>
+      <p>
+        Bastien&gt; Cette expérience chez Oxya a confirmé mon ambition en cybersécurité : transformer chaque défi en opportunité et avancer pas à pas vers mes objectifs.
+      </p>
+    </code></div>
+  </div>
+
+  <div id="retour-btn-container">
+    <a href="oxya.html" id="retour-btn">Retour</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <script>
+    const CHAR_TIME = 15;
+
+    function animateParagraph(sel, callback) {
+      const p = document.querySelector(sel);
+      const text = p.textContent.trim();
+      p.textContent = '';
+      let idx = 0;
+      function step() {
+        if (idx < text.length) {
+          const span = document.createElement('span');
+          span.className = 'char';
+          span.textContent = text[idx++];
+          p.appendChild(span);
+          setTimeout(() => span.classList.add('fade-in'), CHAR_TIME/2);
+
+          const cursor = document.createElement('span');
+          cursor.className = 'cursor';
+          cursor.textContent = '▌';
+          p.appendChild(cursor);
+          setTimeout(() => { cursor.remove(); step(); }, CHAR_TIME);
+        } else if (callback) {
+          callback();
+        }
+      }
+      setTimeout(step, 350);
+    }
+
+    function startAnimations() {
+      const ids = [
+        '#first-container',
+        '#second-container',
+        '#third-container'
+      ];
+      let current = 0;
+      function showNext() {
+        if (current < ids.length) {
+          const sel = ids[current++];
+          const ctn = document.querySelector(sel);
+          ctn.style.opacity = 1;
+          animateParagraph(sel + ' p', showNext);
+        }
+      }
+      showNext();
+    }
+
+    window.onload = startAnimations;
+
+    // Scroll-to-top
+    const myBtn = document.getElementById('myBtn');
+    window.onscroll = () => {
+      myBtn.style.display = document.documentElement.scrollTop > 20 ? 'block' : 'none';
+    };
+    function topFunction() {
+      document.documentElement.scrollTop = 0;
+    }
+
+    // Menu toggle
+    $(function() {
+      $('#menu-toggle').click(e => {
+        e.preventDefault();
+        $('#menu').slideToggle();
+      });
+    });
+  </script>
+</body>
+</html>

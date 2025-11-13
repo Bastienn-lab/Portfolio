@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes compétences</title>
+  <link rel="stylesheet" href="Mes_competences_style.css">
+</head> 
+<body>
+  <header>
+    <nav>
+      <div class="header-left">
+        <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+        <ul id="menu" class="dropdown-menu">
+                    <li><a href="Mes_passions.html">Mes passions</a></li>                 
+                    <li><a href="Mes_competences.html">Mes compétences</a></li>
+                    <li><a href="Qui-suis-je.html">Qui suis-je ?</a></li>
+                    <li><a href="Mes_expériences.html">Mes expériences</a></li>
+                    <li><a href="Mon_parcours.html">Mon parcours</a></li>
+        </ul>
+      </div>
+      <div class="header-center">
+        <a href="mailto:bastienlabeste@gmail.com">
+          <img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail">
+        </a>
+        <a href="http://www.linkedin.com/in/bastienlabeste">
+          <img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn">
+        </a>
+        <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA==">
+          <img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram">
+        </a>
+        <a href="Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024">
+          <img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV">
+        </a>
+      </div>
+      <div class="header-right">
+        <a href="Qui-suis-je.html" style="font-size: 18px; font-weight: bold;">Prochaine Section →</a>
+      </div>
+    </nav>
+  </header>
+  
+  <section id="competences">
+    <h2>COMPÉTENCES PRINCIPALES</h2>
+    <div class="competence-container">
+      <!-- Card 1: Anglais -->
+      <div class="true">
+        <div class="competence">
+          <div class="icon">🇬🇧</div>
+          <h3>Anglais</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 75%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Expression écrite : B2<br>
+              Expression orale : B2<br>
+              Compréhension écrite : B2<br>
+              Compréhension orale : B2
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2: Espagnol -->
+      <div class="true">
+        <div class="competence">
+          <div class="icon">🇪🇸</div>
+          <h3>Espagnol</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 50%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Expression écrite : B1<br>
+              Expression orale : B1<br>
+              Compréhension écrite : B1<br>
+              Compréhension orale : B1
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3: Gestion de projet -->
+      <div class="true">
+        <div class="competence">
+          <div class="icon">📊</div>
+          <h3>Gestion de projet</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 85%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Planification<br>
+              Coordination<br>
+              Suivi
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4: Travail d'équipe -->
+      <div class="true">
+        <div class="competence">
+          <div class="icon">🤝</div>
+          <h3>Travail d'équipe</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 95%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Collaboration<br>
+              Communication<br>
+              Leadership
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5: SAP -->
+      <div class="false">
+        <div class="competence">
+          <div class="icon">🏢</div>
+          <h3>SAP</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 30%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Implémentation SAP<br>
+              Support technique
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6: Gestion & Configuration de réseaux -->
+      <div class="false">
+        <div class="competence">
+          <div class="icon">🌐</div>
+          <h3>Réseaux</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 70%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              CCNA1<br>
+              CCNA2
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 7: Osint -->
+      <div class="false">
+        <div class="competence">
+          <div class="icon">🔍</div>
+          <h3>Osint</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 60%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Recherche avancée<br>
+              Analyse de données publiques<br>
+              Veille stratégique
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 8: Programmation -->
+      <div class="true">
+        <div class="competence">
+          <div class="icon">💻</div>
+          <h3>Programmation</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 70%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Python, C, Java<br>
+              HTML/CSS, JavaScript, PHP<br>
+              SQL<br>
+              Android Studio
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 9: Audit de sécurité -->
+      <div class="false">
+        <div class="competence">
+          <div class="icon">🛡️</div>
+          <h3>Audit de sécurité</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 20%;"></div>
+          </div>
+          <button class="details-btn" onclick="toggleDetails(this)">Détails</button>
+          <div class="details-content">
+            <p>
+              Tests d'intrusion<br>
+              Analyse des vulnérabilités<br>
+              Recommandations
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div id="retour-btn-container">
+    <a href="index.html" id="retour-btn">Retour</a>
+  </div>
+  
+  <script>
+    // Fonction pour afficher ou masquer le contenu détaillé
+    function toggleDetails(button) {
+      var details = button.nextElementSibling;
+      details.style.display = (details.style.display === "block") ? "none" : "block";
+    }
+    // Animation des barres de progression
+    window.addEventListener('load', function() {
+      var progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach(function(bar) {
+        var targetWidth = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(function() {
+          bar.style.width = targetWidth;
+        }, 100);
+      });
+    });
+    // Toggle du menu
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

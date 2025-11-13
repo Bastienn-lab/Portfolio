@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création d'un réseau informatique pour une petite structure</title>
+    <link rel="stylesheet" href="SAM.css">
+</head>
+<body>
+    <header>
+        <nav> 
+            <div class="header-left">
+                <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;"> ☰ Menu</a>
+                <ul id="menu" class="dropdown-menu">
+                    <li><a href="missions_oxya.html">Missions</a></li>
+                    
+                    <li><a href="ressenti_oxya.html">Ressenti</a></li>
+                    
+                    <li><a href="competence_oxya.html">Compétences développées</a></li>
+                    <li><a href="outils_oxya.html">Outils</a></li>
+                    
+                </ul>
+            </div>
+            <div class="header-center">
+                <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail"></a>
+                <a href="http://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn"></a>
+                <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA=="><img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram"></a>
+                <a href="./Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024"><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV"></a>
+            </div>
+            <div class="header-right">
+                <a href="Cockpit.html" style="font-size: 18px;"> Prochain Projet →</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="content-container">
+            <section id="preuves">
+                <h2 style="text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);">SAM</h2>
+                <p style="font-size: 20px;">
+                    SAM est un bastion de sécurité qui permet de se connecter de manière sécurisée aux environnements des clients à l’aide de comptes authentifiés. Il enregistre toutes les activités effectuées sur les équipements et les machines virtuelles (VMs) des clients.
+                </p>
+                <p style="font-size: 20px;">
+                    Je l’utilise pour me connecter en SSH directement aux terminaux et équipements des clients, accéder aux machines virtuelles, et interagir avec les instances SAP pour effectuer les différentes manipulations nécessaires. SAM assure un accès sécurisé tout en garantissant une traçabilité complète des actions effectuées.
+                </p>
+            </section>
+
+            <div class="sidebar">
+                <section id="outils">
+                    <h2>Types de services gérés</h2>
+                    <ul>
+                        <li>Accès sécurisé aux équipements clients</li>
+                        <li>Connexion aux machines virtuelles (VMs)</li>
+                        <li>Gestion des instances SAP</li>
+                        <li>Traçabilité des activités</li>
+                    </ul>
+                </section>
+                <section id="Language">
+                    <h2>Langues</h2>
+                    <ul>
+                        <li>Français</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <div class="project-item2">
+                <a href="SAM-accueil.png">
+                    <img src="SAM-accueil.png" alt="Projet 1" style="width: -webkit-fill-available;">
+                </a>
+            </div>
+            
+            
+        </div>
+    </div> 
+    
+    <div id="retour-btn-container">
+        <a href="outils_oxya.html" id="retour-btn">Retour</a>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+          var menu = document.getElementById('menu');
+          if (menu.style.display === 'block') {
+              menu.style.display = 'none';
+          } else {
+              menu.style.display = 'block';
+          }
+      });
+    </script> 
+</body>
+</html>

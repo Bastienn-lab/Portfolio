@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal de Stage</title>
+    <link rel="stylesheet" href="amadeus-style.css">
+</head>
+<body> 
+  <header>
+    <nav>
+      <div class="header-left">
+        <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+        <ul id="menu" class="dropdown-menu">
+          <li><a href="missions_oxya.html">Missions</a></li>
+          <li><a href="ressenti_oxya.html">Ressenti</a></li>
+          <li><a href="competence_oxya.html">Compétences développées</a></li>
+          <li><a href="outils_oxya.html">Outils</a></li>
+          
+        </ul> 
+      </div>
+      <div class="header-center">
+        <a href="mailto:bastienlabeste@gmail.com">
+          <img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail">
+        </a>
+        <a href="http://www.linkedin.com/in/bastienlabeste">
+          <img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn">
+        </a>
+        <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA==">
+          <img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram">
+        </a>
+        <a href="Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024">
+          <img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV">
+        </a>
+      </div>
+      <div class="header-right">
+        <a href="oxya.html" style="font-size: 18px; font-weight: bold;">Prochaine Section →</a>
+      </div>
+    </nav>
+  </header>
+  
+  <section class="diary-container">
+    <h1>Journal de Stage</h1>
+    <div class="diary-entry">
+      <h2>Jour 1 : 16 décembre 2019</h2>
+      <p>Arrivé à 8h, j'ai patienté dans le bureau de mon père avant d'entamer officiellement à 9h. J'ai reçu mon badge de stagiaire, me donnant accès libre dans l'enceinte, accompagné d'une remise au restaurant d'entreprise. La journée a débuté par une rencontre avec les autres stagiaires, nos parents et notre tutrice, qui nous a introduits aux normes de sécurité et au fonctionnement des caméras de surveillance. Ensuite, Anne, notre tutrice suivante, a pris le relais, nous présentant son rôle d'accueil et de gestion d'équipe. L'après-midi, après un déjeuner convivial, Cécile Gelly du training center nous a guidés, partageant des insights sur les formations et compétences clés développées chez Amadeus. Cette première journée riche en découvertes s'est conclue sur une note positive.</p>
+    </div>
+    <div class="diary-entry">
+      <h2>Jour 2 : 17 décembre 2019</h2>
+      <p>Arrivant tôt, j'ai attendu dans le bureau de mon père avant de rejoindre mon groupe. Notre tuteur du jour, un parent d'élève, nous a emmenés aux Trayades, un autre bâtiment d'Amadeus. Nous avons exploré l'histoire et la structure d'Amadeus, y compris l'organigramme et les rôles clés. Après le déjeuner, un autre tuteur nous a présenté les méthodes de travail, notamment les méthodologies waterfall et agile. Il a également décrit en détail le rôle d'un chef de projet, soulignant l'importance de la gestion optimisée des ressources et du temps.</p>
+    </div>
+    <div class="diary-entry">
+      <h2>Jour 3 : 18 décembre 2019</h2>
+      <p>Ma journée a commencé par une rencontre avec Maelle Bousquet, contractor chez Amadeus, qui m'a présenté le concept des communautés internes. Ensuite, François Xavier Kowalski, programmeur, m'a initié au langage Python et ses applications pratiques. Plus tard, nous avons imaginé le design d'un jeu vidéo sur le thème de Star Wars, travaillant sur sa conception et son interface utilisateur. La journée s'est terminée par la découverte d'un data center, où j'ai appris sur les systèmes de protection incendie et utilisé un logiciel de réservation de voyages.</p>
+    </div>
+    <div class="diary-entry">
+      <h2>Jour 4 : 19 décembre 2019</h2>
+      <p>Le jeudi a débuté avec une séance sur la sécurité informatique, abordant conseils essentiels et histoire des réseaux (notamment l'Arpanet). On nous a expliqué l'évolution des réseaux et l'utilisation de technologies telles que TCP, IP et Ethernet. La matinée s'est achevée par des anecdotes sur les hackers et une introduction aux VPN. L'après-midi, accompagnés de deux employés du service DESK, nous avons effectué des livraisons et découvert le processus de traitement des commandes clients.</p>
+    </div>
+    <div class="diary-entry">
+      <h2>Jour 5 : 22 décembre 2019</h2>
+      <p>De retour à Amadeus, j'ai passé la matinée avec un chef de projet en intelligence artificielle, qui m'a fourni des explications détaillées sur l'IA et ses applications. L'après-midi, j'ai eu l'opportunité de découvrir le travail de mon père, d'apprendre sur ses responsabilités et de rencontrer ses collègues. Cette journée a été une expérience enrichissante, offrant un aperçu précieux du monde professionnel dans une entreprise technologique.</p>
+    </div>
+  </section>
+  
+  <div id="retour-btn-container">
+    <a href="Mes_expériences.html" id="retour-btn">Retour</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+  <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+          var menu = document.getElementById('menu');
+          if (menu.style.display === 'block') {
+              menu.style.display = 'none';
+          } else {
+              menu.style.display = 'block';
+          }
+      });
+    </script> 
+</body>
+</html>

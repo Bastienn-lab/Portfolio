@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outils</title>
+    <link rel="stylesheet" href="outils_oxya.css">
+</head>
+<body> 
+    <header> 
+        <nav>
+            <div class="header-left">
+                <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;"> ☰ Menu</a> 
+                <ul id="menu" class="dropdown-menu">
+                    <li><a href="missions_oxya.html">Missions</a></li>
+                    <li><a href="ressenti_oxya.html">Ressenti</a></li>
+                    <li><a href="competence_oxya.html">Compétences développées</a></li>
+                    <li><a href="outils_oxya.html">Outils</a></li>
+                    
+                </ul>
+            </div>
+            <div class="header-center">
+                <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail"></a>
+                <a href="http://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn"></a>
+                <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA=="><img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram"></a>
+                <a href="./Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024"><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV"></a>
+            </div>
+            <div class="header-right">
+                <a href="missions_oxya.html" style="font-size: 18px; font-weight: bold;"> Prochaine Section →</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+
+        <!-- Carte OKTA -->
+        <div class="card background-card1">
+            <div class="content">
+                <div class="overlay-title">
+                    <h2 class="title">Okta</h2>
+                </div>
+                <div class="overlay">
+                    <h2 class="title">Okta</h2>
+                    <p class="copy">Tableau de bord : permet d'accéder facilement à toutes nos applications en un seul endroit.</p>
+                    <a href="Okta.html"><button class="btn">Voir le projet</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte SAM -->
+        <div class="card background-card2">
+            <div class="content">
+                <div class="overlay-title">
+                    <h2 class="title">SAM</h2>
+                </div>
+                <div class="overlay">
+                    <h2 class="title">SAM</h2>
+                    <p class="copy">Bastion : permet de se connecter en toute sécurité aux clients avec des comptes authentifiés et enregistre toutes les activités dans les VMs.</p>
+                    <a href="SAM.html"><button class="btn">Voir le projet</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte COCKPIT -->
+        <div class="card background-card3">
+            <div class="content">
+                <div class="overlay-title">
+                    <h2 class="title">Cockpit</h2>
+                </div>
+                <div class="overlay">
+                    <h2 class="title">Cockpit</h2>
+                    <p class="copy">Application de ticketing : simplifie la gestion des demandes et améliore notre support client.</p>
+                    <a href="Cockpit.html"><button class="btn">Voir le projet</button></a>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Carte SAP SUPPORT -->
+        <div class="card background-card4">
+            <div class="content">
+                <div class="overlay-title">
+                    <h2 class="title">Support SAP</h2>
+                </div>
+                <div class="overlay">
+                    <h2 class="title">Support SAP</h2>
+                    <p class="copy">Base de connaissances : regroupe tout ce dont nous avons besoin pour administrer efficacement un environnement SAP client.</p>
+                    <a href="SAP-support.html"><button class="btn">Voir le projet</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="retour-btn-container">
+            <a href="oxya.html" id="retour-btn">Retour</a>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() { 
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    </script> 
+</body>
+</html>

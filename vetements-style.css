@@ -1,0 +1,593 @@
+.header-spacer {
+  height: 70px;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "Poppins";
+  background-image: url("Les_vetements-fond.webp");
+}
+
+h1 {
+   font-size: 250%
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: white;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+#a {
+  position: absolute;
+  top: 43%;
+  left: 28%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(-10deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(2, 2, 2, 0.519);
+  border-radius: 2.5rem;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+#d {
+    position: absolute;
+    top: 73%;
+    left: 38%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(10deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  }
+
+#b {
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(5deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+  }
+
+  #c {
+    position: absolute;
+    top: 28%;
+    left: 93%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(5deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+  }
+
+#e {
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(5deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+#f {
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(-5deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+#g {
+    position: absolute;
+    top: 75%;
+    left: 80%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(-5deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+#h {
+    position: absolute;
+    top: 28%;
+    left: 93%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(5deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+#i {
+    position: absolute;
+    top: 60%;
+    left: 33.5%;
+    width: 400px;
+    height: 300px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(0deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+#j {
+    position: absolute;
+    top: 43%;
+    left: 70.5%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(-10deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(2, 2, 2, 0.519);
+    border-radius: 2.5rem;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  }
+  
+  #k {
+      position: absolute;
+      top: 73%;
+      left: 80.5%;
+      width: 320px;
+      height: 240px;
+      transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(10deg);
+      padding: 10px;
+      border-radius: 5px;
+      background: rgba(2, 2, 2, 0.519);
+      border-radius: 2.5rem;
+      color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    }
+
+    #l {
+        position: absolute;
+        top: 65%;
+        left: 25%;
+        width: 200px;
+        height: 150px;
+        transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(0deg);
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(2, 2, 2, 0.519);
+        border-radius: 2.5rem;
+        color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+      }
+
+      #m {
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        width: 200px;
+        height: 150px;
+        transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(0deg);
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(2, 2, 2, 0.519);
+        border-radius: 2.5rem;
+        color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+      }
+
+      #n {
+        position: absolute;
+        top: 65%;
+        left: 38%;
+        width: 200px;
+        height: 150px;
+        transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(0deg);
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(2, 2, 2, 0.519);
+        border-radius: 2.5rem;
+        color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+      }
+
+      #o {
+        position: absolute;
+        top: 45%;
+        left: 38%;
+        width: 200px;
+        height: 150px;
+        transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(0deg);
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(2, 2, 2, 0.519);
+        border-radius: 2.5rem;
+        color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+      }
+  
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(2, 2, 2, 0.519);
+  border-radius: 2.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  color: #fff;
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("Les_Jeuxvideos-fond.webp")
+}
+
+#title h1 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+
+}
+
+#slide1:before {
+  background-image: url("Les_Jeuxvideos-fond.webp");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("Les_Jeuxvideos-fond.webp");
+  z-index:2;
+}
+
+#slide3:before {
+  background-image: url("Les_Jeuxvideos-fond.webp");
+  transform: translateZ(-1px) scale(2);
+}
+
+
+#retour-btn-container {
+    position: fixed;
+    left: 20px;
+    bottom: 42px;
+    z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+}
+
+#retour-btn {
+    background-color: rgba(2, 2, 2, 0.519); /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espace intérieur du bouton */
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-weight: bold; /* Rend le texte en gras */
+}
+
+#retour-btn:hover {
+    background-color: rgba(80, 80, 80, 0.938); /* Changement de couleur au survol */
+}
+
+@media only screen and (max-width: 600px) {
+  .slide {
+    padding: 20vh 5%;
+    right: 5%;
+    width: 105vw;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 120%;
+    margin-bottom: 20px; /* Ajout d'un espace entre le paragraphe et l'image */
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  img {
+    width: 100px; /* Réduction de la taille de l'image */
+    height: 75px; /* Réduction de la taille de l'image */
+    position: relative; /* Changement de position relative */
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) scale(0.5); /* Centrage de l'image sous le paragraphe */
+    margin-bottom: 20px; /* Espace sous l'image */
+    padding: 5px;
+  }
+
+  /* Suppression des styles spécifiques pour repositionner toutes les images de la même manière */
+  #a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o {
+    display: none;
+  }
+
+  /* Ajustement du bouton 'Retour' */
+  #retour-btn-container {
+    left: 10px;
+    bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .slide {
+    padding: 25vh 5%;
+  }
+
+  .title {
+    width: 80%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 130%;
+    margin-bottom: 20px; /* Ajout d'un espace entre le paragraphe et l'image */
+  }
+
+  h1 {
+    font-size: 220%;
+  }
+
+  img {
+    width: 160px; /* Ajustement de la taille de l'image */
+    height: 120px; /* Ajustement de la taille de l'image */
+    position: relative; /* Changement de position relative */
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) scale(0.75); /* Centrage de l'image sous le paragraphe */
+    margin-bottom: 20px; /* Espace sous l'image */
+    padding: 5px;
+  }
+
+  /* Suppression des styles spécifiques pour repositionner toutes les images de la même manière */
+  #a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o {
+    display: none;
+  }
+
+  /* Ajustement du bouton 'Retour' */
+  #retour-btn-container {
+    left: 15px;
+    bottom: 15px;
+  }
+}
+
+/* ===== HEADER FIXE & MENU TOGGLE ===== */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: rgba(2,2,2,0.52);
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2%;
+  border-bottom: 2px solid white;
+}
+.header-left, .header-center, .header-right {
+  display: flex;
+  align-items: center;
+}
+.menu-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; left: 0;
+  background: rgba(2,2,2,0.9);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 1001;
+}
+/* quand JS ajoute .visible */
+.dropdown-menu.visible {
+  display: block;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.2);
+}
+.header-center img,
+.header-right img {
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.next-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.next-link:hover {
+  text-decoration: underline;
+}
+/* pour que le contenu ne soit pas masqué sous le header */
+.header-spacer {
+  height: 70px;
+}
+
+/* Espacement des icônes dans le header */
+.header-center a {
+  margin: 0 10px; /* espace gauche/droite autour de chaque icône */
+}
+
+.header-left .menu-icon {
+  margin-right: 20px; /* un peu plus d’espace avant le menu déroulant */
+}
+ 
+
+header {
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(2, 2, 2, 0.519);
+  color: white;
+  padding: 1em 0;
+  border-block-end: 2px solid white;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  position: relative;
+}
+
+.header-left a,
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.header-center a {
+  color: white;
+  text-decoration: none;
+  margin: 0 50px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: rgba(2, 2, 2, 0.9);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
