@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences Développées</title>
+    <link rel="stylesheet" href="competence_oxya.css">
+</head>
+<body> 
+    <header>
+        <nav>
+            <div class="header-left">
+                <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;"> ☰ Menu</a> 
+                <ul id="menu" class="dropdown-menu">
+                    <li><a href="missions_oxya.html">Missions</a></li>
+                    <li><a href="ressenti_oxya.html">Ressenti</a></li>
+                    <li><a href="competence_oxya.html">Compétences développées</a></li>
+                    <li><a href="outils_oxya.html">Outils</a></li>
+
+                </ul>
+            </div>
+            <div class="header-center">
+                <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail"></a>
+                <a href="http://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn"></a>
+                <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA=="><img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram"></a>
+                <a href="./Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024"><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV"></a>
+            </div>
+            <div class="header-right">
+                <a href="outils_oxya.html" style="font-size: 18px; font-weight: bold;"> Prochaine Section →</a>
+            </div>
+        </nav> 
+    </header>
+    <section id="competences">
+        <h2>COMPÉTENCES DÉVELOPPÉES</h2>
+        <div class="competence-container">
+            <div class="true"> 
+                <div class="competence">
+                
+                    <div class="icon">🔐</div>
+                    <h3>Gestion des accès</h3>
+                    <p>Administration et sécurisation</p>
+                </div>
+            </div>
+            <div class="false">
+                <div class="competence">
+                    <div class="icon">☁️</div>
+                    <h3>Services cloud</h3>
+                    <p>Déploiement et gestion d’infrastructures cloud (en initiation)</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">🖥️</div>
+                    <h3>Support client</h3>
+                    <p>Résolution des demandes</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">📄</div>
+                    <h3>Documentation technique</h3>
+                    <p>Rédaction de rapports</p>
+                </div>
+            </div>
+            <div class="false">
+                <div class="competence">
+                    <div class="icon">💾</div>
+                    <h3>Gestion de base de données</h3>
+                    <p>Manipulation et maintenance des bases de données SQL (en progression)</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">⚙️</div>
+                    <h3>Administration réseau</h3>
+                    <p>Configuration et maintenance des équipements réseau</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">🔧</div>
+                    <h3>Maintenance technique</h3>
+                    <p>Support et dépannage des infrastructures IT</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">🔍</div>
+                    <h3>Analyse de logs</h3>
+                    <p>Surveillance et résolution des incidents</p>
+                </div>
+            </div>
+            <div class="false">
+                <div class="competence">
+                    <div class="icon">🛡️</div>
+                    <h3>Sécurité réseau</h3>
+                    <p>Mise en œuvre de politiques de sécurité (en cours d'apprentissage)</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <div id="retour-btn-container">
+        <a href="oxya.html" id="retour-btn">Retour</a>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+          var menu = document.getElementById('menu');
+          if (menu.style.display === 'block') {
+              menu.style.display = 'none';
+          } else {
+              menu.style.display = 'block';
+          }
+      });
+    </script> 
+</body>
+
+</html>

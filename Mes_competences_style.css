@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #7E7E7E;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  background-color: rgba(2, 2, 2, 0.519);
+  z-index: 1000;
+}
+
+header nav { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1em 0;
+  border-block-end: 2px solid white;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  position: relative;
+}
+
+.header-left a,
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.header-center a {
+  color: white;
+  text-decoration: none;
+  margin: 0 50px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(2, 2, 2, 0.9);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section : Compétences */
+#competences {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(2, 2, 2, 0.519); /* Fond noir semi-transparent */
+  border-radius: 8px;
+  width: 80%;
+  margin: 130px 9% 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#competences h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Conteneur des cartes */
+.competence-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Styles des cartes */
+.true, .false {
+  border: 2px solid white;  /* Tous les contours en blanc */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.true:hover, .false:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Carte de compétence */
+.competence {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 220px; /* Taille uniforme */
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Icônes */
+.icon {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #0078d4;
+}
+
+/* Titres */
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: grey;
+}
+
+/* Texte descriptif */
+.competence p {
+  font-size: 1em;
+  color: white;
+}
+
+/* Barre de progression */
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #2187e7;
+  width: 0;
+  transition: width 2s ease-out;
+}
+
+/* Bouton Détails */
+.details-btn {
+  padding: 5px 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Contenu des détails (caché par défaut) */
+.details-content {
+  display: none;
+  text-align: left;
+  background-color: rgba(2, 2, 2, 0.819); 
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Bouton Retour */
+#retour-btn-container {
+  position: fixed;
+  left: 20px;
+  bottom: 42px;
+  z-index: 1000;
+}
+
+#retour-btn {
+  background-color: rgba(2, 2, 2, 0.519);
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#retour-btn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .competence-container {
+    grid-template-columns: 1fr;
+  }
+  #competences {
+    padding: 120px 10px 50px;
+    width: 100%;
+    margin: 150px 10px;
+  }
+}
+

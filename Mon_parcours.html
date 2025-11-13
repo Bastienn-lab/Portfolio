@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon parcours</title>
+    <link rel="stylesheet" href="Mon_parcours-style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="Mon_parcours-java.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-left">
+                <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;"> ☰ Menu</a>
+                <ul id="menu" class="dropdown-menu">
+                    <li><a href="Mes_passions.html">Mes passions</a></li>                 
+                    <li><a href="Mes_competences.html">Mes compétences</a></li>
+                    <li><a href="Qui-suis-je.html">Qui suis-je ?</a></li>
+                    <li><a href="Mes_expériences.html">Mes expériences</a></li>
+                    <li><a href="Mon_parcours.html">Mon parcours</a></li>
+                </ul>
+            </div>
+            <div class="header-center">
+                <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail"></a>
+                <a href="http://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn"></a>
+                <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA=="><img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram"></a>
+                <a href="Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024"><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV"></a>
+            </div>
+            <div class="header-right">
+                <a href="Mes_passions.html" style="font-size: 18px; font-weight: bold;"> Prochaine Section →</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container experience">
+        <div class="row">
+            <div class="col-md-12"> 
+                <h4>Mon Parcours</h4>
+
+                <section class="cd-horizontal-timeline container">
+                    <div class="timeline">
+                    <div class="events-wrapper">
+                        <div class="events">
+                            <ol>
+                                <li><a href="#0" data-date="01/05/2015" class="selected" style="left: 10%"></a></li>
+                                <li><a href="#0" data-date="01/03/2014" class="event2"style="left: 25%"></a></li>
+                                <li><a href="#0" data-date="01/02/2013"  class="event3" style="left: 35%"></a></li>
+                            </ol>
+
+                            <span class="filling-line" aria-hidden="true"></span>
+                        </div> <!-- .events -->
+                    </div> <!-- .events-wrapper -->
+                    </div> <!-- .timeline -->
+
+                    <div class="events-content">
+                        <ol>
+                            <li class="selected" data-date="01/05/2015">
+                                <h5>Collège Albert Camus, Mandelieu </h5> 
+                                <em style="font-size: 25px;">Septembre 2016 - Juillet 2020</em>
+                                <p style="font-size: 20px;">
+                                    Dès mon passage au Collège Albert Camus, j'ai commencé à dessiner les contours de mon avenir professionnel. C'est ici que l'étincelle pour les sciences et plus précisément pour l'informatique s'est allumée, notamment grâce à mon stage de 3ème chez Amadeus. Cette expérience m'a ouvert les yeux sur le monde fascinant de la technologie et m'a donné une première idée claire de la direction que je souhaitais prendre : celle d’une carrière scientifique, avec un fort penchant pour l'informatique.</p>
+                                    <br>
+                            </li>
+
+                            <li data-date="01/03/2014" >
+                                <h5>Lycée Jules Ferry, Cannes </h5>
+                                <em style="font-size: 25px;">Septembre 2020 - Juillet 2023</em>
+                                <p style="font-size: 20px;">Au Lycée Jules Ferry, j'ai affiné mes choix d'orientation grâce à des séances avec une psychologue spécialisée en orientation et aux cours dédiés à ce sujet. Ces moments de réflexion m'ont permis de confirmer mon intérêt pour le secteur informatique. J'ai également acquis des compétences académiques solides, en particulier dans les matières scientifiques, qui m'ont préparé de manière optimale pour mes études supérieures.</p>
+                            </li>
+
+                            <li data-date="01/02/2013">
+                                <h5> IUT Réseaux et Télécommunications, Nice Côte d'Azur </h5>
+                                <em style="font-size: 25px;">Septembre 2023 - Maintenant</em>
+                                <p style="font-size: 20px;">Actuellement étudiant à l'IUT Réseaux et Télécommunications de Nice Côte d'Azur, je m'épanouis pleinement dans cette formation qui allie théorie et pratique. Ce parcours me permet de me plonger dans les détails techniques des réseaux et de la télécommunication, tout en consolidant mes connaissances en cybersécurité. Chaque jour, je me rapproche un peu plus de mon objectif de devenir un expert en cybersécurité, armé d'un savoir-faire technique et d'une vision claire de l'avenir du numérique.</p>
+                            </li>
+                        </ol>
+                    </div> <!-- .events-content -->
+                </section>
+
+            </div> <!-- end div experience -->
+        </div> <!-- end row experience -->
+    </div> <!-- end container experience -->
+    <div id="retour-btn-container">
+        <a href="index.html" id="retour-btn">Retour</a>
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

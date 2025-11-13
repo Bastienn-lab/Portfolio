@@ -1,0 +1,157 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
+}
+
+*{box-sizing:border-box;}
+
+html,body{height:100%;margin:0;padding:0;background:#7E7E7E;background-size:cover;background-position:center;}
+
+body{display:flex;flex-direction:column;justify-content:center;align-items:center;}
+
+/* ───────────── HEADER ───────────── */
+header{width:100%;position:fixed;top:0;left:0;background:rgba(2,2,2,.519);z-index:1000;}
+header nav{display:flex;justify-content:space-between;align-items:center;color:#fff;padding:1em 0;border-block-end:2px solid #fff;}
+.header-left,.header-center,.header-right{display:flex;align-items:center;}
+.header-left{position:relative;}
+.header-left a,.header-right a{color:#fff;text-decoration:none;margin:0 20px;}
+.header-center a{color:#fff;text-decoration:none;margin:0 50px;}
+header nav a:hover{text-decoration:underline;}
+
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:rgba(2,2,2,.9);list-style:none;padding:0;margin:0;border:1px solid #fff;border-radius:5px;z-index:1000;}
+.dropdown-menu li{width:100%;}
+.dropdown-menu li a{display:block;padding:10px;color:#fff;text-decoration:none;}
+.dropdown-menu li a:hover{background:rgba(255,255,255,.2);}
+
+/* ───────────── SECTION COMPÉTENCES ───────────── */
+#competences{
+  text-align:center;
+  padding:50px 20px;
+  background:rgba(2,2,2,.519);
+  border-radius:8px;
+  width:1400px;
+  margin:250px 40px;
+  margin-top:40%;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+}
+
+/* Bouton « top » */
+#myBtn{
+  display:none;position:fixed;bottom:42px;right:.2%;z-index:99;
+  outline:none;background:rgba(2,2,2,.519);
+  border:2px solid #fff;color:#fff;cursor:pointer;
+  padding:10px 20px;border-radius:.25rem;font-weight:bold;
+}
+#myBtn:hover{background:rgba(80,80,80,.938);}
+
+/* Titre de section */
+h2{font-size:2.5em;margin-bottom:30px;color:#fff;text-transform:uppercase;}
+
+/* Grille des cartes */
+.competence-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  justify-items:center;
+  padding:20px;
+}
+
+/* Cartes TRUE et FALSE — même taille, seule la couleur de bordure change */
+.true{
+  border:2px solid green;
+  border-radius:8px;
+  box-shadow:0 4px 6px rgba(0,0,0,.1);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.false{
+  border:2px solid orange;
+  border-radius:8px;
+  box-shadow:0 4px 6px rgba(0,0,0,.1);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+
+/* Contenu de la carte */
+.competence{
+  background:rgba(0,0,0,.1);
+  border-radius:8px;
+  padding:20px;
+  text-align:center;
+  height:220px;           /* ← hauteur fixe garantie */
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* Effet hover */
+.true:hover,.false:hover{
+  transform:translateY(-10px);
+  box-shadow:0 6px 12px rgba(0,0,0,.2);
+}
+
+/* Icônes, titres, texte */
+.icon{font-size:3em;margin-bottom:10px;color:#0078d4;}
+h3{font-size:1.2em;margin:10px 0;color:grey;}
+p{font-size:1em;color:#fff;}
+
+/* ───────────── BOUTON RETOUR ───────────── */
+#retour-btn-container{position:fixed;left:20px;bottom:42px;z-index:1000;}
+#retour-btn{
+  background:rgba(2,2,2,.519);color:#fff;
+  padding:10px 20px;border:2px solid #fff;border-radius:.25rem;
+  text-decoration:none;font-weight:bold;
+}
+#retour-btn:hover{background:rgba(80,80,80,.938);}
+
+/* ───────────── MEDIA QUERY MOBILE ───────────── */
+@media only screen and (max-width:600px){
+  .header-left,.header-center,.header-right{flex-direction:column;align-items:flex-start;}
+  .header-left a,.header-right a{margin:10px 0;}
+  .header-center a{margin:10px 0;}
+  #competences{width:90%;margin:150px 5%;}
+  .competence-container{grid-template-columns:1fr;}
+}
+/* Container .true & .false — hauteur fixe */
+.true {
+  border: 2px solid rgb(94, 185, 19);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  align-items: stretch; /* force le contenu à prendre toute la hauteur */
+  height: 220px;
+  width: 100%;
+}
+
+.false {
+  border: 2px solid rgb(209, 32, 32);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  align-items: stretch; /* force le contenu à prendre toute la hauteur */
+  height: 220px;
+  width: 100%;
+}
+
+/* Bloc .competence à remplir 100% de hauteur */
+.competence {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}

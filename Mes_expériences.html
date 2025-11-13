@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes expériences</title>
+  <link rel="stylesheet" href="experiences-style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="experiences.js"></script>
+</head>
+
+<body>
+  <!-- ─────────── NAVIGATION ─────────── -->
+  <header>
+    <nav>
+      <div class="header-left">
+        <a href="#" id="menu-toggle" style="font-size:20px;font-weight:bold;">☰ Menu</a>
+        <ul id="menu" class="dropdown-menu">
+          <li><a href="Mes_passions.html">Mes passions</a></li>
+          <li><a href="Mes_competences.html">Mes compétences</a></li>
+          <li><a href="Qui-suis-je.html">Qui suis-je ?</a></li>
+          <li><a href="Mes_expériences.html">Mes expériences</a></li>
+          <li><a href="Mon_parcours.html">Mon parcours</a></li>
+        </ul>
+      </div>
+
+      <div class="header-center">
+        <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" style="height:40px;border-radius:50px;" alt="Mail"></a>
+        <a href="https://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" style="height:40px;border-radius:50px;" alt="LinkedIn"></a>
+        <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA=="><img src="insta-logo.png" style="height:40px;border-radius:50px;" alt="Instagram"></a>
+        <a href="Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024"><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px;border-radius:50px;" alt="CV"></a>
+      </div>
+
+      <div class="header-right">
+        <a href="Mon_parcours.html" style="font-size:18px;font-weight:bold;">Prochaine Section →</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ─────────── CARTES ─────────── -->
+  <main class="page-content">
+    <!-- Amadeus -->
+    <div class="card background-card1">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">Stage de 3ᵉ, Amadeus</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">Stage de 3ᵉ, Amadeus</h2>
+          <p class="copy">
+            Venez découvrir mon stage de 3ᵉ chez Amadeus : une expérience riche
+            explorant l’IA, la cybersécurité et le graphisme.
+          </p>
+          <a href="amadeus.html"><button class="btn">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oxya -->
+    <div class="card background-card2">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">Alternance, Oxya</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">Alternance, Oxya</h2>
+          <p class="copy">
+            Découvrez mon alternance chez Oxya : administration SAP
+            et gestion de bases de données.
+          </p>
+          <a href="oxya.html"><button class="btn">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ─────────── BOUTON RETOUR ─────────── -->
+  <div id="retour-btn-container">
+    <a href="index.html" id="retour-btn">Retour</a>
+  </div>
+
+  <!-- ─────────── SCRIPT MENU BURGER ─────────── -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click',()=>{
+      const menu=document.getElementById('menu');
+      menu.style.display=(menu.style.display==='block')?'none':'block';
+    });
+  </script>
+</body>
+</html>

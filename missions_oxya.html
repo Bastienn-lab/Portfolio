@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions</title>
+    <link rel="stylesheet" href="missions_oxya.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-left">
+                <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;"> ☰ Menu</a> 
+                <ul id="menu" class="dropdown-menu">
+                    <li><a href="missions_oxya.html">Missions</a></li>
+                    <li><a href="ressenti_oxya.html">Ressenti</a></li>
+                    <li><a href="competence_oxya.html">Compétences développées</a></li>
+                    <li><a href="outils_oxya.html">Outils</a></li>
+
+                </ul>
+            </div>
+            <div class="header-center">
+                <a href="mailto:bastienlabeste@gmail.com"><img src="mail-logo.png" style="height:40px; border-radius: 50px;" alt="Mail"></a>
+                <a href="http://www.linkedin.com/in/bastienlabeste"><img src="linkedin-logo.png" style="height:40px; border-radius: 50px;" alt="LinkedIn"></a>
+                <a href="https://instagram.com/bastienn.lab?igshid=OGQ5ZDc2ODk2ZA=="><img src="insta-logo.png" style="height:40px; border-radius: 50px;" alt="Instagram"></a>
+                <a href="./Bastien-Labeste_CV-2024.pdf" download="Bastien-Labeste_CV-2024"><img src="https://cdn-icons-png.flaticon.com/512/3589/3589055.png" style="height:40px; border-radius: 50px;" alt="CV"></a>
+            </div>
+            <div class="header-right">
+                <a href="ressenti_oxya.html" style="font-size: 18px; font-weight: bold;"> Prochaine Section →</a>
+            </div>
+        </nav>
+    </header>
+    <section id="competences">
+        <h2>MISSIONS PRINCIPALES</h2>
+        <div class="competence-container">
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">🔧</div>
+                    <h3>Maintien opérationnel</h3>
+                    <p>Assurer la disponibilité et le bon fonctionnement des systèmes clients.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">⚙️</div>
+                    <h3>Configuration & Optimisation</h3>
+                    <p>Configurer, maintenir et optimiser les architectures techniques mises en place.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">📂</div>
+                    <h3>Gestion des demandes</h3>
+                    <p>Prendre en charge les demandes et changements pour les systèmes clients.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">🚨</div>
+                    <h3>Gestion des incidents</h3>
+                    <p>Diagnostiquer et résoudre les incidents techniques affectant les systèmes.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">💻</div>
+                    <h3>Administration technique</h3>
+                    <p>Administrer SAP, les OS, les bases de données, les outils de sauvegarde, etc.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">💬</div>
+                    <h3>Communication client</h3>
+                    <p>Maintenir un échange régulier et efficace avec les clients.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">☁️</div>
+                    <h3>Participation à des projets</h3>
+                    <p>Contribuer aux upgrades, migrations vers le cloud ...</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">🔒</div>
+                    <h3>Sécurité</h3>
+                    <p>Veiller à l’application stricte des politiques de sécurité en vigueur.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">📈</div>
+                    <h3>Comités de pilotage</h3>
+                    <p>Participer aux comités pour assurer un suivi structuré des projets clients.</p>
+                </div>
+            </div>
+            <div class="true">
+                <div class="competence">
+                    <div class="icon">📊</div>
+                    <h3>Suivi des performances</h3>
+                    <p>Analyser et surveiller les performances des systèmes pour garantir leur efficacité.</p>
+                </div>
+            </div>
+            
+        </div> 
+    </section>
+    
+
+    <div id="retour-btn-container">
+        <a href="oxya.html" id="retour-btn">Retour</a>
+    </div>
+     <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+          var menu = document.getElementById('menu');
+          if (menu.style.display === 'block') {
+              menu.style.display = 'none';
+          } else {
+              menu.style.display = 'block';
+          }
+      });
+    </script> 
+</body>
+
+</html>
