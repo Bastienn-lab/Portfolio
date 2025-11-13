@@ -1,0 +1,89 @@
+body {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQikxijuaO2bvmfpRDPjukTUn7234O93skeDfgkxbAgxVPADuRUbQ-T0lGVvbt62YtZeqo&usqp=CAU") no-repeat center center;
+  background-size: contain;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 400% 400%;
+
+}
+
+.ps5_startup {
+  text-align: center;
+}
+
+.ps_logo {
+  width: 50px;
+  height: 50px;
+  background: url('https://images.lesindesradios.fr/fit-in/1100x2000/filters:format(webp)/medias/S3E2PZgG71/image/icon-sony-ps4-ps5-hit-west1620076653705.png') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  padding: 10px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes backgroundAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+@keyframes particle-animation {
+  to {
+    transform: translate3d(var(--x), var(--y), var(--z));
+  }
+}
+
+
+.text-container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(2, 2, 2, 0.519);
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%; /* Pour limiter la largeur du texte */
+  border-radius: 2em;
+}
+
+.intro-text {
+  font-size: 25px;
+  display: inline; /* Afficher le texte en ligne */
+}
+
+#loading-animation {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999; /* Pour s'assurer que l'animation est au-dessus de tout le contenu */
+}
+
