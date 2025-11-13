@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video games – Bastien Labeste</title>
+  <link rel="stylesheet" href="jeux-videos-style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header> 
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li> 
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Video games</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="https://letterboxd.com/Bastien___/" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+  <main>
+    <!-- Bloc 1 -->
+    <section class="mobility-section">
+      <div class="text">
+        <h2>Survival games</h2>
+        <p>
+          I enjoy survival games like Ark, The Forest, and Minecraft. These games challenge me to gather resources, build shelters, and manage limited supplies while exploring vast worlds. They train creativity, planning, and adaptability in dynamic environments.
+        </p>
+      </div>
+      <div class="image">
+        <a href="#"><img src="ark.avif" alt="Kobe University – Japon" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+
+    <!-- Bloc 2 -->
+    <section class="mobility-section">
+      <div class="image">
+        <a href="#"><img src="valorant.jpeg" alt="University of Twente Campus" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+      <div class="text">
+        <h2>First-person shooters</h2>
+        <p>
+          I play FPS games like Valorant and Call of Duty. These games require fast reflexes, teamwork, and strategic thinking under pressure. They sharpen my focus, hand-eye coordination, and decision-making skills in high-stakes scenarios.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloc 3 -->
+    <section class="mobility-section">
+      <div class="text">
+        <h2>Battle royale</h2>
+        <p>
+          I enjoy Battle Royale games like Fortnite, Warzone, and Apex Legends. The fast-paced action and survival competition improve my reflexes, strategy, and adaptability while keeping gameplay exciting and unpredictable.
+        </p>
+      </div>
+      <div class="image">
+        <a href="#"><img src="fortnite.jpg" alt="Technical University of Munich - Main Campus" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+
+    <!-- Bloc 4 -->
+    <section class="mobility-section">
+      <div class="image">
+        <a href="#"><img src="lol.jpg" alt="DiscoverEU program travels" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+      <div class="text">
+        <h2>Strategy games</h2>
+        <p>
+         Strategy games such as League of Legends and Teamfight Tactics help me develop analytical thinking and long-term planning. I enjoy devising tactics, anticipating opponents’ moves, and adapting strategies on the fly, which strengthens problem-solving skills.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloc 5 -->
+    <section class="mobility-section-2">
+      
+      <div class="text">
+        <h2>Gacha games</h2>
+        <p>
+        I also play gacha games such as Genshin Impact and Honkai Star Rail. These games combine character collection, storytelling, and strategy, offering both creativity and planning challenges. They teach resource management and long-term decision-making.
+        </p>
+      </div>
+      <div class="image">
+        <a href="#"><img src="genshin.jpg" alt="DiscoverEU program travels" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+   <div id="retour-btn-container">
+    <a href="Mes_passions.html" id="retour-btn">Return</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      });
+    });
+  </script>
+  <script> 
+    // Bouton scroll vers le haut
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>

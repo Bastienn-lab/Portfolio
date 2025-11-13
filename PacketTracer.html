@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a computer network for a small business</title>
+    <link rel="stylesheet" href="PacketTracer-style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">
+                    <li><a href="projets-com.html">Telecommunications</a></li>
+                    
+                    <li><a href="projets-informatique.html">Computer science</a></li>
+                    
+                    <li><a href="projets-cyber.html">Networks & Cybersecurity</a></li>
+                    
+                    <li><a href="projets-orga.html">Communication</a></li>
+                    
+                </ul>  
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Creating a computer network for a small business</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="GNS3.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+
+    <div class="main-container">
+        <div class="content-container">
+            <section id="preuves">
+                <h2 style="text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);">Creating a computer network for a small business</h2>
+                <p style="font-size: 20px;">
+                   As part of my studies, I developed a computer network for an SME, using tools like GNS3 and Packet Tracer to simulate and demonstrate the implementation of essential services, including routing, switching, and security with a Cisco ASA 5505 firewall.
+                </p>
+                <p style="font-size: 20px;">
+                  This project allowed me to practice technical networking skills and strengthen my expertise in cybersecurity solutions tailored for small businesses.
+                </p>
+            </section>
+
+            <div class="sidebar">
+                <section id="outils">
+                    <h2>Tools Used</h2>
+                    <ul>
+                        <li>Cisco Packet Tracer</li>
+                        <li>Wireshark</li>
+                        <li>GNS3</li>
+                        <li>Enregistreur d'écran</li>
+                    </ul>
+                </section>
+                <section id="Language">
+                    <h2>Languages Used</h2>
+                    <ul>
+                        <li>TCL</li>
+                    </ul>
+                </section> 
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <div class="project-item2">
+                <a href="pck-tracer-photo.png">
+                    <img src="pck-tracer-photo.png" alt="Projet 1" style="height: 165%;">
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="SAE21_LABESTE-ALEGRE_Video.mp4">
+                    <img src="SAE-21-photo-video.png" alt="Projet 2">
+                    <div class="image-overlay">Demonstration video of the project</div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="SAE21_LABESTE-ALEGRE_Rapport.pdf">
+                    <img src="SAE-21-photo-rapport.png" alt="Projet 3">
+                    <div class="image-overlay">Final project report </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+   <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+    <div id="retour-btn-container">
+        <a href="projets-cyber.html" id="retour-btn">Return</a>
+    </div>
+    <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      }); 
+    });
+  </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+    </script> 
+</body>
+</html>

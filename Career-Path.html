@@ -1,0 +1,341 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Path – Bastien Labeste</title>
+  <link rel="stylesheet" href="Career-Path.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="experiences.js"></script>
+</head>
+
+<body>
+  <!-- ─────────── NAVIGATION ─────────── -->
+  <header> 
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Career Path</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="International-Mobility.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+
+  <!-- Flèche de timeline -->
+  <div class="timeline-arrow">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+  </div>
+  <div class="timeline-point"></div>
+<div class="timeline-point"></div>
+<div class="timeline-point"></div>
+<div class="timeline-point"></div>
+<div class="timeline-point"></div>
+
+<!-- Dates au-dessus des points -->
+<div class="timeline-date">2020</div>  <!-- Amadeus -->
+<div class="timeline-date">2020 – 2023</div>  <!-- Lycée -->
+<div class="timeline-date">2023 – 2025</div>  <!-- IUT -->
+<div class="timeline-date">2024 – Now</div>   <!-- Oxya -->
+<div class="timeline-date">2025 - Now</div>     <!-- Enseeiht -->
+  <div class="timeline-spacer"></div>
+
+  <!-- ─────────── CARTES ─────────── -->
+  <main class="page-content">
+   
+    <!-- Amadeus -->
+    <div class="card background-card1">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">Middle School Internship, Amadeus</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">Middle School Internship, Amadeus</h2>
+          <p class="copy">
+            Explored AI, Machine Learning & Cybersecurity at a leading tech company. Hands-on experience in real projects.
+          </p>
+          <a href="#"><button class="btn" data-modal="modal-amadeus">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card background-card3">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">Lycée Jules Ferry, Cannes</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">Lycée Jules Ferry, Cannes</h2>
+          <p class="copy">
+            Specialized in Maths, Engineering & Computer Science. Strengthened problem-solving and system design skills.
+          </p>
+          <a href="#"><button class="btn" data-modal="modal-lycee">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card background-card4">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">IUT Nice côte d'azur, Sophia Antipolis</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">IUT Nice côte d'azur, Sophia Antipolis</h2>
+          <p class="copy">
+            Learned programming, networking & IT security. Applied Cybersecurity skills in a real-world apprenticeship.
+          </p>
+          <a href="#"><button class="btn" data-modal="modal-iut">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oxya -->
+    <div class="card background-card2">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">Apprenticeship, Oxya</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">Apprenticeship, Oxya</h2>
+          <p class="copy">
+            Managing SAP, Linux/Windows & cloud operations. Real-world experience in professional infrastructures.
+          </p>
+          <a href="#"><button class="btn" data-modal="modal-oxya">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card background-card5">
+      <div class="content">
+        <div class="overlay-title">
+          <h2 class="title">Enseeiht, Toulouse</h2>
+        </div>
+        <div class="overlay">
+          <h2 class="title">Enseeiht, Toulouse</h2>
+          <p class="copy">
+            Developing skills in programming, networking & cybersecurity projects. Focus on Digital Sciences (SN).
+          </p>
+          <a href="#"><button class="btn" data-modal="modal-enseeiht">Voir le projet</button></a>
+        </div>
+      </div>
+    </div>
+    
+
+  <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+
+  </main>
+
+
+   <div id="retour-btn-container">
+    <a href="index.html" id="retour-btn">Return</a>
+  </div>
+
+ <!-- === Modals pour chaque projet === -->
+
+<!-- Amadeus -->
+<div id="modal-amadeus" class="project-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="modal-left">
+      <h2>Middle School Internship, Amadeus</h2>
+      <p>
+        During my internship at Amadeus, I had the opportunity to explore how a leading technology company operates. 
+        I gained insights into AI, Machine Learning, Cybersecurity, and Graphic Design, participating in mini-projects and practical exercises. 
+        This experience allowed me to meet professionals such as AI Project Managers and Machine Learning Engineers, and understand how emerging technologies are applied in real business environments.
+      </p>
+      <h3>Key Learnings:</h3>
+      <ul>
+        <li>AI and Machine Learning concepts</li>
+        <li>Basic Cybersecurity practices</li>
+        <li>Exposure to professional project workflows</li>
+        <li>Team collaboration and professional communication</li>
+      </ul>
+      <span class="tag internship">Internship</span>
+      <span class="tag mid">Middle School</span>
+
+    </div>
+    <div class="modal-right">
+      <img src="amadeus-entree.jpg" alt="Amadeus project">
+    </div>
+  </div>
+</div>
+
+<!-- Lycée -->
+<div id="modal-lycee" class="project-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="modal-left">
+      <h2>Lycée Jules Ferry, Cannes</h2>
+      <p>
+        Completed a French General Baccalaureate with specializations in Mathematics, Engineering Sciences, and Computer Science (NSI). 
+        This program helped me strengthen my logical reasoning, problem-solving abilities, and technical skills. 
+        I completed several projects that required designing algorithms, solving complex math problems, and understanding basic computer systems.
+      </p>
+      <h3>Key Learnings:</h3>
+      <ul>
+        <li>Advanced mathematics and engineering principles</li>
+        <li>Introduction to computer science (NSI)</li>
+        <li>Projects in system design and computational logic</li>
+        <li>Collaboration with peers on technical exercises</li>
+      </ul>
+      <span class="tag highschool">High School</span>
+      <span class="tag bachelor">Baccalaureate</span>
+    </div>
+    <div class="modal-right">
+      <img src="jules-ferry.jpg" alt="Lycee project">
+    </div>
+  </div>
+</div>
+
+<!-- IUT -->
+<div id="modal-iut" class="project-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="modal-left">
+      <h2>IUT Nice Côte d'Azur, Sophia Antipolis</h2>
+      <p>
+        During my two-year Bachelor’s program in Networks and Telecommunications, I built a solid foundation in programming, networking, system administration, and IT security. 
+        My second year focused on Cybersecurity, enhanced through an apprenticeship at oXya where I applied my knowledge to real-world environments. 
+        I developed practical skills in configuring networks, securing systems, and managing IT infrastructure.
+      </p>
+        <h3>Key Learnings:</h3>
+      <ul>
+        <li>Network design and management</li>
+        <li>System administration (Linux & Windows)</li>
+        <li>IT security and vulnerability testing</li>
+        <li>Practical application via professional apprenticeship</li>
+      </ul>
+      <span class="tag bachelorDeg">Bachelor’s Degree</span>
+      <span class="tag netTel">Networking & Telecom</span>
+      
+    </div>
+    <div class="modal-right">
+      <img src="iut.jpg" alt="IUT project">
+    </div>
+  </div>
+</div>
+
+<!-- Oxya -->
+<div id="modal-oxya" class="project-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="modal-left">
+      <h2>Apprenticeship, Oxya</h2>
+      <p>
+        Currently managing and optimizing SAP environments, Linux and Windows systems, virtualization, and cloud operations. 
+        My work includes monitoring infrastructure, automating tasks, and troubleshooting complex issues. 
+        I collaborate with teams to deploy new solutions and ensure system reliability, gaining in-depth exposure to real-world SAP infrastructures and enterprise IT environments.
+        </p>
+        
+     <h3>Key Learnings:</h3>
+    <ul>
+        <li>SAP environment optimization</li>
+        <li>System administration (Linux & Windows)</li>
+        <li>Virtualization and cloud deployments</li>
+        <li>Infrastructure monitoring and troubleshooting</li>
+      </ul>
+      <span class="tag apprenticeship ">Apprenticeship</span>
+      <span class="tag pro ">Professional Experience</span>
+    </div>
+    <div class="modal-right">
+      <img src="oxya.png" alt="Oxya project">
+    </div>
+  </div>
+</div>
+
+<!-- Enseeiht -->
+<div id="modal-enseeiht" class="project-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="modal-left">
+      <h2>Enseeiht, Toulouse</h2>
+      <p>
+        Currently pursuing an Engineering program in Digital Sciences (SN). 
+        I am developing skills in programming (Ada, NS2/NSG2), networking, system administration, and cybersecurity through coursework and hands-on projects. 
+        This education prepares me for complex engineering challenges and enhances my technical problem-solving capabilities.
+      </p>
+      <h3>Key Learnings:</h3>
+      <ul>
+        <li>Programming in Ada and C</li>
+        <li>Network simulation (NS2/NSG2)</li>
+        <li>Cybersecurity project implementation</li>
+        <li>System administration and modeling</li>
+      </ul>
+      <span class="tag engineering">Engineering School</span>
+      <span class="tag sciences">Professional Experience</span>
+    </div>
+    <div class="modal-right">
+      <img src="enseeiht.jpg" alt="Enseeiht project">
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      });
+    });
+  </script>
+  <script>
+    // Bouton scroll vers le haut
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+  <script>
+  // Ouvrir modals
+$('.btn').click(function(e){
+    e.preventDefault();
+    var targetModal = $(this).attr('data-modal');
+    $('#' + targetModal).addClass('active');
+});
+
+// Fermer modals
+$('.close-btn').click(function(){
+    $(this).closest('.project-modal').removeClass('active');
+});
+
+// Fermer en cliquant en dehors du contenu
+$('.project-modal').click(function(e){
+    if(e.target === this) {
+        $(this).removeClass('active');
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Home"</title>
+
+    <!--JS-->
+    <script src="https://kit.fontawesome.com/67284cce80.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="startTime()">
+ 
+
+    <header>
+        <div class="left">
+            <a href="#" style="color:white;">Home</a>
+            <a href="Page2.html" style="font-weight: 100;">Portfolio</a>
+        </div>
+        <div class="right">
+            <a href="https://www.oxya.com/fr/"><img src="logo-single-oxya.png" style="height:70px; border-radius: 50px;" class="oxya_logo" alt="oxya logo"></a>
+            <div class="dropdown">
+                <a href="#">CV<i class="fa-solid fa-download"></i></a>
+                <div class="dropdown-content">
+                    <a href="CV - Bastien Labeste.pdf" download="CV - Bastien Labeste"><img src="fr.webp" style="height:40px; border-radius: 50px; margin-left: 0px;" alt="Français"></a>
+                    <a href="Resume - Bastien Labeste.pdf" download="Resume - Bastien Labeste"><img src="en.png" style="height:40px; border-radius: 50px; margin-left: 0px;" alt="Mail"></a>
+                </div>
+            </div>
+                <a href="http://www.linkedin.com/in/bastienlabeste" ><img src="linkedin-logo.png" style="height:50px; border-radius: 50px; " alt="LinkedIn"></a>
+                
+            
+            <a href="#"><img src="Avatar-photo.png" style="height:80px; border-radius: 50px;" alt="avatar"></a>
+            <div id="clock"></div>
+        </div>
+    </header>
+    <div id="particle-container"></div>
+    <div class="ps5_startup">
+        <div class="controller">
+          <div id="loading-animation" class="hidden">
+    <span class="triangle" data-animate="false"></span>
+    <span class="circle" data-animate="false"></span>
+    <span class="cross" data-animate="false"></span>
+    <span class="square" data-animate="false"></span>
+    </div>
+           
+        </div>
+    </div>
+
+    <div id="carousel">
+
+        <div class="prevLeftSecond" id="passions">
+            <section>
+                <img src="passions-fond.png" id="2" alt="mes_passions_logo">
+                <span>Passions & Interests</span>
+            </section> 
+            <div class="game-info">
+                <div class="left">
+                    <img src="passions-fond.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="mes_passions_logo">
+                    <h1>Dive into my world</h1>
+                    <div class="button-left">
+                        <a href="Mes_passions.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="Mes_passions.html">
+                        <div class="cover">
+                            <span class="complet">Full section</span>
+                            <span class="update">Version 1.0</span>
+                            <div class="overlay">Preview</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="prev" id="competences">
+            <section>
+                <img src="CSR Engagement.png" id="3" alt="mes_competences_logo">
+                <span>Civic Engagement</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="CSR Engagement.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="mes_competences_logo">
+                    <h1>Make an impact</h1>
+                    <div class="button-left">
+                        <a href="Civic-Engagement.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="Civic-Engagement.html">
+                        <div class="cover">
+                            <span class="complet">Full section</span>
+                            <span class="update">Version 1.0</span>
+                            <div class="overlay">Preview</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="selected" id="qui-suis-je">
+            <section>
+                <img src="profile.png" id="4" alt="qui_suis_je_logo">
+                <span>Profile</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="profile.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="qui_suis_je_logo">
+                    <h1>Know me better</h1>
+                    <div class="button-left">
+                        <a href="Qui-suis-je.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="Qui-suis-je.html" style="height: 300px;width: 300px; object-fit: cover;">
+                        <div class="cover">
+                            <span class="complet">Full section</span>
+                            <span class="update">Version 1.0</span>
+                            <div class="overlay">Preview</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="next" id="experiences">
+            <section>
+                <img src="Career-path.png" id="5" alt="mes_experiences_logo">
+                <span>Career Path</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="Career-path.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="mes_experiences_logo">
+                    <h1>Follow my journey</h1>
+                    <div class="button-left">
+                        <a href="Career-Path.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="Career-Path.html" style="height: 300px;width: 300px; object-fit: cover;">
+                        <div class="cover">
+                            <span class="complet">Full section</span>
+                            <span class="update">Version 1.0</span>
+                            <div class="overlay">Preview</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nextRightSecond" id="parcours">
+            <section>
+                <img src="mobility.png" id="6" alt="mon_parcours_logo">
+                <span>International Mobility</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="mobility.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="mon_parcours_logo">
+                    <h1>Explore the world</h1>
+                    <div class="button-left">
+                        <a href="International-Mobility.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="International-Mobility.html">
+                        <div class="cover">
+                            <span class="complet">Full section</span>
+                            <span class="update">Version 1.0</span>
+                            <div class="overlay">Preview</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let lastClickedElement = null;
+
+        function moveToSelected(element) {
+            if (element == "next") {
+                var selected = $(".selected").next();
+            } else if (element == "prev") {
+                var selected = $(".selected").prev();
+            } else {
+                var selected = element;
+            }
+
+            var next = $(selected).next();
+            var prev = $(selected).prev();
+            var prevSecond = $(prev).prev();
+            var nextSecond = $(next).next();
+
+            $(selected).removeClass().addClass("selected");
+            $(prev).removeClass().addClass("prev");
+            $(next).removeClass().addClass("next");
+            $(nextSecond).removeClass().addClass("nextRightSecond");
+            $(prevSecond).removeClass().addClass("prevLeftSecond");
+            $(nextSecond).nextAll().removeClass().addClass('hideRight');
+            $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+        }
+
+        // Eventos teclado
+        $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                    moveToSelected('prev');
+                    break;
+
+                case 39: // right
+                    moveToSelected('next');
+                    break;
+
+                default: return;
+            }
+            e.preventDefault();
+        });
+
+        $('#carousel > div').click(function() {
+            if ($(this).hasClass('selected')) {
+                if (lastClickedElement === this) {
+                    const id = $(this).attr('id');
+                    const pageMap = {
+                        'passions': 'Mes_passions.html',
+                        'competences': 'Civic-Engagement.html',
+                        'qui-suis-je': 'Qui-suis-je.html',
+                        'experiences': 'Career-Path.html',
+                        'parcours': 'International-Mobility.html'
+                    };
+                    if (id && pageMap[id]) {
+                        window.location.href = pageMap[id];
+                    }
+                } else {
+                    lastClickedElement = this;
+                }
+            } else {
+                moveToSelected($(this));
+                lastClickedElement = this;
+            }
+        });
+
+        $('#prev').click(function() {
+            moveToSelected('prev');
+        });
+
+        $('#next').click(function() {
+            moveToSelected('next');
+        });
+
+        // Set background image change
+        for (let i = 1; i <= 6; i++) {
+            $(`#${i}`).on('click', function() {
+                $('body').css('background-image', 'url(fond-play.webp)');
+            });
+        }
+
+        // Dropdown visibility management
+        document.querySelector('.dropdown').onmouseleave = function() {
+            setTimeout(function() {
+                document.querySelector('.dropdown-content').style.display = 'none';
+            }, 3000); // Définir le délai ici
+        };
+
+        document.querySelector('.dropdown').onmouseenter = function() {
+            document.querySelector('.dropdown-content').style.display = 'block';
+        };
+
+        // Clock function
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            m = checkTime(m);
+            document.getElementById('clock').innerHTML =  h + ":" + m;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};
+            return i;
+        }
+    </script>
+    <script>
+        const particleContainer = document.getElementById('particle-container');
+
+        // Formes possibles
+        const shapes = ['○', '×', '□', '△'];
+
+        // Fonction pour générer une particule
+        function createParticle() {
+            let particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Sélection aléatoire d'une forme
+            let shape = shapes[Math.floor(Math.random() * shapes.length)];
+            particle.textContent = shape;
+
+            // Taille, opacité et position aléatoires
+            let size = Math.random() * 20 + 10; // Taille entre 10 et 30px
+            let opacity = Math.random() * 0.7 + 0.3; // Opacité entre 0.3 et 1
+            let x = Math.random() * 100; // Position x aléatoire (en pourcentage)
+            let y = Math.random() * 100; // Position y aléatoire (en pourcentage)
+            let endX = x + (Math.random() * 50 - 25); // Déplacement aléatoire sur l'axe X
+            let endY = y + (Math.random() * 50 - 25); // Déplacement aléatoire sur l'axe Y
+            let duration = Math.random() * 15 + 10; // Durée aléatoire entre 10 et 25s
+
+            // Application des styles
+            particle.style.cssText = `
+                position: absolute;
+                top: ${y}%;
+                left: ${x}%;
+                font-size: ${size}px;
+                color: white;
+                opacity: ${opacity};
+                transform: translate(-50%, -50%);
+                animation: particle-animation ${duration}s linear infinite,
+                        fade-out ${duration}s linear forwards;
+                --endX: ${endX}%;
+                --endY: ${endY}%;
+                --duration: ${duration}s;
+            `;
+
+            particleContainer.appendChild(particle);
+
+            // Supprimer la particule après l'animation
+            setTimeout(() => {
+                particle.remove();
+            }, duration * 1000); // Durée max de l'animation
+        }
+
+        // Générer des particules à intervalles réguliers
+        setInterval(() => {
+            createParticle();
+        }, 500); // Une particule toutes les 500ms
+
+                        
+      
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const welcomeScreen = document.getElementById("welcome-screen");
+            const mainContent = document.getElementById("main-content");
+
+            // Vérifie si l'utilisateur a déjà vu l'animation lors de cette session
+            const hasSeenWelcome = sessionStorage.getItem("hasSeenWelcome");
+
+            if (!hasSeenWelcome) {
+                // Affiche l'animation d'accueil
+                welcomeScreen.style.display = "flex";
+                setTimeout(() => {
+                    welcomeScreen.style.display = "none";
+                    mainContent.style.display = "block";
+                    // Marque que l'utilisateur a vu l'animation pour cette session
+                    sessionStorage.setItem("hasSeenWelcome", "true");
+                }, 5000); // Temps total de l'animation
+            } else {
+                // Passe directement au contenu principal
+                welcomeScreen.style.display = "none";
+                mainContent.style.display = "block";
+            }
+        });
+
+
+      </script>
+</body>
+</html>

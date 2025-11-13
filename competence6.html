@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevator speech</title>
+    <link rel="stylesheet" href="Competence6-style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">
+                    <li><a href="projets-com.html">Telecommunications</a></li>
+                    
+                    <li><a href="projets-informatique.html">Computer science</a></li>
+                    
+                    <li><a href="projets-cyber.html">Networks & Cybersecurity</a></li>
+                    
+                    <li><a href="projets-orga.html">Communication</a></li> 
+                    
+                </ul>  
+    </div> 
+
+    <div class="header-center">
+      <h2 class="page-title">Elevator speech</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="livret.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+
+    <div class="main-container">
+        <div class="content-container">
+            <section id="preuves">
+                <h2 style="text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);">Elevator speech</h2>
+                <p style="font-size: 20px;">
+                  blablabla
+                </p>
+                <p style="font-size: 20px;">
+                  blablabla
+                </p>
+            </section>
+
+            <div class="sidebar">
+                <section id="outils">
+                    <h2>Tools Used</h2>
+                    <ul>
+                        <li>jsp</li>
+                        <li>jsp2</li>
+                        <li>jsp3</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <div class="project-item">
+                <a href="#">
+                    <img src="CHANTIER.jpg" alt="Projet 2" >
+                    <div class="image-overlay">Elevator speech</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+     <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+    <div id="retour-btn-container">
+        <a href="projets-orga.html" id="retour-btn">Return</a>
+    </div>
+    <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      }); 
+    });
+  </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+    </script> 
+</body>
+</html>

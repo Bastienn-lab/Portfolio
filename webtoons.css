@@ -1,0 +1,362 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+  background-color: #7E7E7E; /* fond gris foncé comme la page modèle */
+  color: white;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 200px;
+  height: 230px;
+  display: block;
+}
+
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(2, 2, 2, 0.9);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 95%;
+  margin: 1% auto; 
+  padding: 100px 1rem 2rem; /* espace pour header fixe */
+}
+
+.films-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Film grid */
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.film-item { 
+  background-color: rgba(2,2,2,0.819);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.film-item img {
+  border-bottom: 1px solid #fff;
+}
+
+/* Overlay info */
+.film-item::after {
+  content: attr(data-title) " | " attr(data-rating);
+  display: block;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: rgba(2,2,2,0.519);
+}
+
+/* ===== BUTTONS ===== */
+#retour-btn-container,
+#myBtn {
+  z-index: 1000;
+}
+
+#retour-btn, #myBtn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: rgba(2,2,2,0.519);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#retour-btn:hover,
+#myBtn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: rgba(2, 2, 2, 0.519);
+  color: white;
+  text-align: center;
+  padding: 1.9% 0;
+  margin-top: 0;
+  border-top: 2px solid white;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .film-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+#retour-btn-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#retour-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: rgba(2,2,2,0.519);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#retour-btn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+#myBtn {
+  display: none; /* affichage géré par JS */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: rgba(2,2,2,0.519);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+.films-container {
+  margin-top: 2%;
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  border-radius: 10px;
+}
+
+
+.page-title {
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    linear-gradient(135deg, #5e5e5e, #2f2f2f),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 2px, transparent 20px);
+  background-blend-mode: overlay;
+  color: white;
+  padding-top: 100px;
+}
+
+header {
+  width: 100%;
+  height: 13.4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(2, 2, 2, 0.519);
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.15% 0;
+  border-bottom: 2px solid white;
+}
+.header-left, .header-center, .header-right { display: flex; align-items: center; }
+.header-left { position: relative; }
+.header-left a, .header-right a { color: white; text-decoration: none; margin: 0 20px; }
+.page-title { font-size: 1.6em; font-weight: bold; text-align: center; }
+
+
+#retour-btn-container {
+  position: fixed;
+  left: 1%;
+  bottom: 2.25%;
+  z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+}
+
+#retour-btn {
+  background-color: rgba(2, 2, 2, 0.519); /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espace intérieur du bouton */
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  text-decoration: none; /* Supprime le soulignement du lien */
+  font-weight: bold; /* Rend le texte en gras */
+}
+
+#retour-btn:hover {
+  background-color: rgba(80, 80, 80, 0.938); /* Changement de couleur au survol */
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #7E7E7E;
+  color: white;
+  padding-top: 100px;
+}
+
+/* Bandes lumineuses sur les côtés */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.25), transparent);
+  z-index: -1;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0; 
+}
+
+body {
+  background:
+    linear-gradient(135deg, #5e5e5e, #2f2f2f),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 2px, transparent 20px);
+  background-blend-mode: overlay;
+}
+
+
+
+/* ===== Ajustements uniquement pour écrans très larges ===== */
+@media (min-width: 1600px) {
+
+
+/* === HEADER === */
+header {
+  width: 100%;
+  height: 12%;
+  flex: 0 0 13.2%;
+  background-color: rgba(2, 2, 2, 0.519);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; 
+  border-bottom: 2px solid white;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+
+
+/* === FOOTER === */
+footer {
+  width: 100%;
+  padding: 1.8%;
+  
+}
+
+#retour-btn-container {
+  position: fixed; 
+  left: 1%;
+  bottom: 2.5%; 
+  z-index: 1000; 
+}
+
+#myBtn {
+  bottom: 2.5%;
+  right: 1%;
+  width: 2.6%;
+ 
+}
+
+/* Empêche le scroll horizontal */ 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+}

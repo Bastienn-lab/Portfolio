@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webtoons – Bastien Labeste</title>
+  <link rel="stylesheet" href="webtoons.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header> 
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Webtoons</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="sport.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+ 
+  <main class="films-container">
+    <!-- PROFIL WEBTOON -->
+    <section class="letterboxd-profile">
+      <h2>Mon Univers Webtoon</h2>
+      <div class="letterboxd-card">
+        <p>Je lis des webtoons depuis des années — plus de 500 au compteur !  
+           Voici mes coups de cœur et quelques recommandations, classés par genre et par préférence personnelle.</p>
+      </div>
+    </section>
+
+    <!-- TOP 10 FAVORIS -->
+    <section class="top-section">
+        <h2>Top 10 Webtoons</h2>
+        <div class="film-grid">
+            <div class="film-item" data-title="Wind Breaker" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/c1c408f6-3dec-4d62-b6b3-b57e615d933c/wind-breaker" target="_blank" rel="noopener">
+                <img src="assets/wind_breaker.webp" alt="Wind Breaker">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="Lookism" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/596191eb-69ee-4401-983e-cc07e277fa17/lookism" target="_blank" rel="noopener">
+                <img src="assets/Lookism_Volume_1_Cover.jpg" alt="Lookism">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="Tower of God" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/c0ee660b-f9f2-45c3-8068-5123ff53f84a/tower-of-god" target="_blank" rel="noopener">
+                <img src="assets/tower-of-god-saison-2-visuel-4.webp" alt="Tower of God">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="Lecteur Omniscient" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/9a414441-bbad-43f1-a3a7-dc262ca790a3/jeonjijeok-dokja-sijeom" target="_blank" rel="noopener">
+                <img src="assets/lecteur-omniscient.jpg" alt="Lecteur Omniscient">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="La Jacinthe Violette" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/56abe490-6318-4dd2-93d2-f84385d3fcac/purple-hyacinth" target="_blank" rel="noopener">
+                <img src="assets/la_jacinthe_violette-1468221-264-432.webp" alt="La Jacinthe Violette">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="La Duchesse Déchue" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/8c6e0eb8-fb94-44a3-9bf4-fa72dee36775/your-throne" target="_blank" rel="noopener">
+                <img src="assets/la_duchesse_dechue_14171.webp" alt="La Duchesse Déchue">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="The Beginning After The End" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/4ada20eb-085a-491a-8c49-477ab42014d7/the-beginning-after-the-end" target="_blank" rel="noopener">
+                <img src="assets/tbate.jpg" alt="The Beginning After The End">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="The Greatest Estate Developer" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/d7f56ace-cd30-48b9-8b64-afeca0077fca/yeokdaegeum-yeongji-seolgyesa" target="_blank" rel="noopener">
+                <img src="assets/the_greatest_estate_developer-5108194-264-432.webp" alt="The Greatest Estate Developer">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="The Boxer" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/40efa78d-d27a-4364-92ac-6d7af69a851b/the-boxer" target="_blank" rel="noopener">
+                <img src="assets/the_boxer.jpg" alt="The Boxer">
+            </a>
+            </div>
+
+            <div class="film-item" data-title="Sweet Home" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/7cc37898-6669-407f-b7a6-f23a2859bc0b/sweet-home" target="_blank" rel="noopener">
+                <img src="assets/sweet_home.jpg" alt="Sweet Home">
+            </a>
+            </div>
+        </div>
+        </section>
+
+
+    <!-- TOP 10 ACTION / FANTASY -->
+    <section class="top-section">
+      <h2>Action / Fantasy</h2>
+      <div class="film-grid">
+        <div class="film-item" data-title="The Beginning After The End" data-rating="★★★★★">
+          <a class="film-link" href="https://mangadex.org/title/4ada20eb-085a-491a-8c49-477ab42014d7/the-beginning-after-the-end" target="_blank" rel="noopener">
+            <img src="assets/tbate.jpg" alt="The Beginning After The End">
+          </a>
+        </div>
+        <div class="film-item" data-title="Tower of God" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/c0ee660b-f9f2-45c3-8068-5123ff53f84a/tower-of-god" target="_blank" rel="noopener">
+                <img src="assets/tower-of-god-saison-2-visuel-4.webp" alt="Tower of God">
+            </a>
+        </div>
+        <div class="film-item" data-title="The Greatest Estate Developer" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/d7f56ace-cd30-48b9-8b64-afeca0077fca/yeokdaegeum-yeongji-seolgyesa" target="_blank" rel="noopener">
+                <img src="assets/the_greatest_estate_developer-5108194-264-432.webp" alt="The Greatest Estate Developer">
+            </a>
+        </div>
+        <div class="film-item" data-title="Lecteur Omniscient" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/9a414441-bbad-43f1-a3a7-dc262ca790a3/jeonjijeok-dokja-sijeom" target="_blank" rel="noopener">
+                <img src="assets/lecteur-omniscient.jpg" alt="Lecteur Omniscient">
+            </a>
+        </div>
+        <div class="film-item" data-title="Leviathan" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/274a8e39-71a8-4bd2-af19-4572518fe44f/leviathan" target="_blank" rel="noopener">
+                <img src="assets/leviathan.jpeg" alt="Leviathan">
+            </a>
+        </div>
+        <div class="film-item" data-title="Solo Leveling" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/32d76d19-8a05-4db0-9fc2-e0b0648fe9d0/solo-leveling" target="_blank" rel="noopener">
+                <img src="assets/solo-leveling.jpg" alt="Solo Leveling">
+            </a>
+        </div>
+        <div class="film-item" data-title="Jungle Juice" data-rating="★★★★½">
+          <a class="film-link" href="https://mangadex.org/title/80d288be-bdb9-4637-804e-02b2f89ad2d8/jungle-juice" target="_blank" rel="noopener">
+            <img src="assets/jungle-juice.webp" alt="Jungle Juice">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Legend of the Northern Blade" data-rating="★★★★½">
+          <a class="film-link" href="https://mangadex.org/title/9ed16bc9-f570-4e71-8dda-aebc098b683b/the-legend-of-the-northern-blade" target="_blank" rel="noopener">
+            <img src="assets/The Legend of the Northern Blade.jpg" alt="The Legend of the Northern Blade">
+          </a>
+        </div>
+        <div class="film-item" data-title="SSS-Class Revival Hunter" data-rating="★★★★½">
+          <a class="film-link" href="https://mangadex.org/title/4a973243-952e-44d7-a50f-883b4b7c9cc2/sss-geup-jugeoya-saneun-hunter" target="_blank" rel="noopener">
+            <img src="assets/SSS-Class Revival Hunter.webp" alt="SSS-Class Revival Hunter">
+          </a>
+        </div>
+        <div class="film-item" data-title="Pick Me Up" data-rating="★★★★½">
+          <a class="film-link" href="https://mangadex.org/title/58167656-a065-4b49-b499-bd73d00555d5/pick-me-up" target="_blank" rel="noopener">
+            <img src="assets/Pick Me Up.jpg" alt="Pick Me Up">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Ember Knight" data-rating="★★★★½">
+          <a class="film-link" href="https://mangadex.org/title/5ff9e370-a993-4f3b-9e70-750c3a098fc5/the-ember-knight" target="_blank" rel="noopener">
+            <img src="assets/The Ember Knight.jpg" alt="The Ember Knight">
+          </a>
+        </div>
+        <div class="film-item" data-title="Player" data-rating="★★★★½">
+          <a class="film-link" href="https://www.webtoons.com/fr/fantasy/player/list?title_no=2985" target="_blank" rel="noopener">
+            <img src="assets/player.webp" alt="Player">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Academy Undercover Professor" data-rating="★★★★½">
+          <a class="film-link" href="https://mangadex.org/title/d5c0896a-d4d5-4ee0-8bf1-a113cb1b86ac/academy-s-undercover-professor" target="_blank" rel="noopener">
+            <img src="assets/academys-undercover-professor-its-coming-back-v0-5xaukb9nnz5e1.jpg" alt="The Academy Undercover Professor">
+          </a>
+        </div>
+        <div class="film-item" data-title="Revenge Of The Baskerville Bloodhound" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/fbf326f7-ccbd-4d54-bbad-852d76e46523/cheolhyeolgeomga-sanyanggaeui-hoegwi" target="_blank" rel="noopener">
+            <img src="assets/Revenge Of The Baskerville Bloodhound.webp" alt="Revenge Of The Baskerville Bloodhound">
+          </a>
+        </div>
+        <div class="film-item" data-title="Hero Ticket" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/c6c30be6-3ded-428b-8bcf-be81ab8f7d33/the-boy-of-death" target="_blank" rel="noopener">
+            <img src="assets/hero-ticket.jpg" alt="Hero Ticket">
+          </a>
+        </div>
+        <div class="film-item" data-title="Le Sens De l'Épée" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/825eb50f-7331-4455-bb0e-c0d58fa9976a/absolute-sword-sense" target="_blank" rel="noopener">
+            <img src="assets/theworldaftertheend.jpg" alt="Le Sens De l'Épée">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Extra's Academy Survival Guide" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/7f15e45c-b7fd-4164-8d8e-ede14a817f0d/the-extra-s-academy-survival-guide" target="_blank" rel="noopener">
+            <img src="assets/The Extra's Academy Survival Guide.jpg" alt="The Extra's Academy Survival Guide">
+          </a>
+        </div>
+        <div class="film-item" data-title="Return of the Blossoming Blade" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/f0f62b75-5989-4f32-9b59-ab56abe35fc1/return-of-the-blossoming-blade" target="_blank" rel="noopener">
+            <img src="assets/Return of the Blossoming Blade.jpg" alt="Return of the Blossoming Blade">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Villain Wants to Live" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/384308ae-cf17-490c-9a9e-8bb0db90c3e6/the-villain-wants-to-live" target="_blank" rel="noopener">
+            <img src="assets/The Villain Wants to Live.jpg" alt="The Villain Wants to Live">
+          </a>
+        </div>
+        <div class="film-item" data-title="X & Ash" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/53316f95-a8d0-405a-845f-8dc206fee760/x-ash" target="_blank" rel="noopener">
+            <img src="assets/X_Ash_Naver_Webtoon.webp" alt="X & Ash">
+          </a>
+        </div>
+        <div class="film-item" data-title="Nano Machine" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/6e4805a6-75ab-462d-883c-4ddedb8e4df6/nano-machine" target="_blank" rel="noopener">
+            <img src="assets/nano-machine.webp" alt="Nano Machine">
+          </a>
+        </div>
+        <div class="film-item" data-title="The World After The End" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/14b81959-13ed-46eb-a277-da66f672acb5/the-world-after-the-fall" target="_blank" rel="noopener">
+            <img src="assets/theworldaftertheend.jpg" alt="The World After The End">
+          </a>
+        </div>
+        <div class="film-item" data-title="Return To Player" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/cac1a74c-0b5f-498a-8472-05f0636e1b4d/return-to-player" target="_blank" rel="noopener">
+            <img src="assets/return_to_player.webp" alt="Return To Player">
+          </a>
+        </div>
+        <div class="film-item" data-title="Hero Killer" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/163306e6-1700-42a4-882f-26db124cbec2/hero-killer" target="_blank" rel="noopener">
+            <img src="assets/Hero_Killer.webp" alt="Hero Killer">
+          </a>
+        </div>
+        <div class="film-item" data-title="66,666 Years Advent of the Dark Mage" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/cafd8f00-32c4-4fd2-b44f-0e25b9ff024b/66-666-years-advent-of-the-dark-mage" target="_blank" rel="noopener">
+            <img src="assets/66,666_Years_Advent_of_the_Dark_Mage.webp" alt="66,666 Years Advent of the Dark Mage">
+          </a>
+        </div>
+        <div class="film-item" data-title="Dream Sharing" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/b1b49c96-e01d-447a-80e8-9ef5809fcfe1/gongyumong" target="_blank" rel="noopener">
+            <img src="assets/Dream-Sharing.jpg" alt="Dream Sharing">
+          </a>
+        </div>
+        <div class="film-item" data-title="Villain To Kill" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/94e6f5a4-a215-4f5b-ae82-febc560be66d/villain-to-kill" target="_blank" rel="noopener">
+            <img src="assets/villain_to_kill_19121.webp" alt="Villain To Kill">
+          </a>
+        </div>
+        <div class="film-item" data-title="L'épéiste Prodige de l'Académie" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/633d470a-4146-4dd3-b841-93dd648c23a5/the-academy-s-genius-swordsman" target="_blank" rel="noopener">
+            <img src="assets/l_epeiste_prodige_de_l_academie_vo_25712.webp" alt="L'épéiste Prodige de l'Académie">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Regressed Mercenary Has a Plan" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/53f1ec5e-058b-4d18-a23b-2a7dbca5669f/the-regressed-mercenary-has-a-plan" target="_blank" rel="noopener">
+            <img src="assets/The Regressed Mercenary Has a Plan.webp" alt="The Regressed Mercenary Has a Plan">
+          </a>
+        </div>
+        <div class="film-item" data-title="Terminally Ill Dark Knight" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/10c548ad-f7ce-47c3-8db8-b8863440a07b/time-limited-genius-dark-knight" target="_blank" rel="noopener">
+            <img src="assets/terminally-ill-genius-dark-knight-thoughts-on-this-v0-2z4k2rv0129b1.webp" alt="Terminally Ill Dark Knight">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Ghost Writing Hero" data-rating="★★★★">
+          <a class="film-link" href="https://www.webtoons.com/fr/action/the-ghost-writing-hero/list?title_no=8110" target="_blank" rel="noopener">
+            <img src="assets/The Ghost Writing Hero.jpg" alt="The Ghost Writing Hero">
+          </a>
+        </div>
+        <div class="film-item" data-title="A Moi l'Item Légendaire" data-rating="★★★★">
+          <a class="film-link" href="https://www.webtoons.com/fr/action/mythic-item-obtained/list?title_no=4669" target="_blank" rel="noopener">
+            <img src="assets/a_moi_l_item_legendaire_24354.webp" alt="A Moi l'Item Légendaire">
+          </a>
+        </div>
+        <div class="film-item" data-title="Myst, Might, Mayhem" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/df5f8e3d-64a1-4287-8f08-4a732e9cb757/myst-might-mayhem" target="_blank" rel="noopener">
+            <img src="assets/Myst, Might, Mayhem.jpg" alt="Myst, Might, Mayhem">
+          </a>
+        </div>
+        <div class="film-item" data-title="Overgeared" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/3fc308c9-4b00-4dc3-943e-1f39242bc708/overgeared" target="_blank" rel="noopener">
+            <img src="assets/Overgeared.jpg" alt="Overgeared">
+          </a>
+        </div>
+        <div class="film-item" data-title="Second Life Ranker" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/1ffca916-3ad7-46d2-9591-a9b39e639971/second-life-ranker" target="_blank" rel="noopener">
+            <img src="assets/second-life-ranker.webp" alt="Second Life Ranker">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Lazy Lord Masters the Sword" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/26c8f00a-3925-4f22-ac21-83145be2b733/the-lazy-lord-masters-the-sword" target="_blank" rel="noopener">
+            <img src="assets/The Lazy Lord Masters the Sword.jpg" alt="The Lazy Lord Masters the Sword">
+          </a>
+        </div>
+        <div class="film-item" data-title="Blink Master of the Magic Academy" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/c5cdf853-1b18-4d1a-8534-a7772841e424/blink-master-of-the-magic-academy" target="_blank" rel="noopener">
+            <img src="assets/Blink Master of the Magic Academy.jpg" alt="Blink Master of the Magic Academy">
+          </a>
+        </div>
+        <div class="film-item" data-title="I'm the Max-Level Newbie" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/a253e13a-2b41-4f7d-915e-1e31a3f5d31d/i-m-the-max-level-newbie" target="_blank" rel="noopener">
+            <img src="assets/I'm the Max-Level Newbie.jpg" alt="I'm the Max-Level Newbie">
+          </a>
+        </div>
+        <div class="film-item" data-title="Barbarian Quest" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/cb114a5d-56ed-4288-a2ab-671a9d9702c4/barbarian-quest" target="_blank" rel="noopener">
+            <img src="assets/Barbarian Quest.jpg" alt="Barbarian Quest">
+          </a>
+        </div>
+        <div class="film-item" data-title="Tomb Raider King" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/16e1767d-a8d5-4173-b87f-f7023f6c4578/tomb-raider-king" target="_blank" rel="noopener">
+            <img src="assets/Tomb Raider King.webp" alt="Tomb Raider King">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Swordmaster's Son" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/85a8ebda-9959-4244-ad03-a2d9f6a746a2/the-swordmaster-s-son" target="_blank" rel="noopener">
+            <img src="assets/The Swordmaster's Son.jpg" alt="The Swordmaster's Son">
+          </a>
+        </div>
+        <div class="film-item" data-title="I Killed the Main Player" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/a4896718-ecef-4701-8497-5ba07d4e89cc/i-killed-the-main-player" target="_blank" rel="noopener">
+            <img src="assets/I Killed the Main Player.jpg" alt="I Killed the Main Player">
+          </a>
+        </div>
+        <div class="film-item" data-title="My Blasted Reincarnated Life" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/6e769716-df1e-4d66-89cc-32f3b46e17dc/my-blasted-reincarnated-life" target="_blank" rel="noopener">
+            <img src="assets/My Blasted Reincarnated Life.jpg" alt="My Blasted Reincarnated Life">
+          </a>
+        </div>
+        <div class="film-item" data-title="Hardcore Leveling Warrior" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/93398095-659d-4137-a630-5961c82a1f97/hardcore-leveling-warrior" target="_blank" rel="noopener">
+            <img src="assets/Hardcore_Leveling_Warrior.webp" alt="Hardcore Leveling Warrior">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Knight Who Only Lives Today" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/514f1a94-b09f-4331-8cf9-0f01d06d3b80/the-knight-who-only-lives-today" target="_blank" rel="noopener">
+            <img src="assets/The Knight Who Only Lives Today.jpg" alt="The Knight Who Only Lives Today">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Infinite Mage" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/4d97b35d-2d9f-4369-964f-3b0ce2c7fbbc/the-infinite-mage" target="_blank" rel="noopener">
+            <img src="assets/The Infinite Mage.jpg" alt="The Infinite Mage">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Reborn Young Lord Is An Assassin" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/49c09cc3-6e2d-458f-9a54-7fa5ecae1f6f/the-reborn-young-lord-is-an-assassin" target="_blank" rel="noopener">
+            <img src="assets/the reborn young lord is an assassin.jpg" alt="The Reborn Young Lord Is An Assassin">
+          </a>
+        </div>
+        <div class="film-item" data-title="The Stellar Swordmaster" data-rating="★★★★">
+          <a class="film-link" href="https://mangadex.org/title/abe0bb3b-a05e-4602-aa4f-578e0b962cf9/the-stellar-swordmaster" target="_blank" rel="noopener">
+            <img src="assets/The Stellar Swordmaster.jpg" alt="The Stellar Swordmaster">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP 10 Slice of Life -->
+    <section class="top-section">
+      <h2>Slice of Life</h2>
+      <div class="film-grid">
+      <div class="film-item" data-title="Wind Breaker" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/c1c408f6-3dec-4d62-b6b3-b57e615d933c/wind-breaker" target="_blank" rel="noopener">
+                <img src="assets/wind_breaker.webp" alt="Wind Breaker">
+            </a>
+        </div>
+        <div class="film-item" data-title="The Boxer" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/40efa78d-d27a-4364-92ac-6d7af69a851b/the-boxer" target="_blank" rel="noopener">
+                <img src="assets/the_boxer.jpg" alt="The Boxer">
+            </a>
+        </div>
+
+        <div class="film-item" data-title="Lookism" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/596191eb-69ee-4401-983e-cc07e277fa17/lookism" target="_blank" rel="noopener">
+                <img src="assets/Lookism_Volume_1_Cover.jpg" alt="Lookism">
+            </a>
+        </div>
+
+        <div class="film-item" data-title="Héro Fragile" data-rating="★★★★½">
+            <a class="film-link" href="https://www.webtoons.com/fr/action/weak-hero/list?title_no=2229" target="_blank" rel="noopener">
+                <img src="assets/heros-fragile-webtoon.webp" alt="Héro Fragile">
+            </a>
+        </div>
+        <div class="film-item" data-title="Sang & Papillon" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/5d6474ca-d337-49c9-b42f-48c172a43602/the-blood-of-the-butterfly" target="_blank" rel="noopener">
+                <img src="assets/sangs_et_papillons.jpg" alt="Sang & Papillon">
+            </a>
+        </div>
+        <div class="film-item" data-title="Red King" data-rating="★★★★½">
+            <a class="film-link" href="https://www.webtoons.com/fr/fantasy/the-red-king/list?title_no=2118" target="_blank" rel="noopener">
+                <img src="assets/Red King.webp" alt="Red King">
+            </a>
+        </div>
+        <div class="film-item" data-title="Batard" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/bb169078-7289-4f95-948f-9315960e6905/bastard" target="_blank" rel="noopener">
+                <img src="assets/batard_7133.webp" alt="Batard">
+            </a>
+        </div>
+        <div class="film-item" data-title="The Girl From Random Chatting" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/e7d7219c-a12b-484f-b29d-6013beac61b2/random-chat" target="_blank" rel="noopener">
+                <img src="assets/The Girl From Random Chatting w.jpg" alt="The Girl From Random Chatting">
+            </a>
+        </div>
+        <div class="film-item" data-title="High School Mercenary" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/9ecd208c-c592-4462-9f57-4d7d4a9f956f/mercenary-enrollment" target="_blank" rel="noopener">
+                <img src="assets/high_school_mercenary.jpg" alt="High School Mercenary">
+            </a>
+        </div>
+        <div class="film-item" data-title="Killer Peter" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/a3db9212-7e87-44ea-8264-23f914671444/killer-peter" target="_blank" rel="noopener">
+                <img src="assets/Killer_Peter_Thumbnail.webp" alt="Killer Peter">
+            </a>
+        </div>
+        <div class="film-item" data-title="Designated Bully" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/28f0d967-4110-4a8c-8426-2aeea4489111/designated-bully" target="_blank" rel="noopener">
+                <img src="assets/designated_bully-5212843-264-432.webp" alt="Designated Bully">
+            </a>
+        </div>
+        <div class="film-item" data-title="Unordinary" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/de34e04a-a9a4-4d9b-b434-f13ad275230c/unordinary" target="_blank" rel="noopener">
+                <img src="assets/Unordinary.jpg" alt="Unordinary">
+            </a>
+        </div>
+        <div class="film-item" data-title="Viral Hit" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/d2df017b-c003-4de6-9625-4f1fba7aef97/how-to-fight" target="_blank" rel="noopener">
+                <img src="assets/Viral Hit.jpg" alt="Viral Hit">
+            </a>
+        </div>
+        <div class="film-item" data-title="Le Chemin Vers Maman" data-rating="★★★★">
+            <a class="film-link" href="https://www.webtoons.com/fr/fantasy/a-way-back-to-mom/list?title_no=7924" target="_blank" rel="noopener">
+                <img src="assets/le_chemin_vers_maman_vo_31280.webp" alt="Le Chemin Vers Maman">
+            </a>
+        </div>
+        <div class="film-item" data-title="Powerless" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/f2f62a65-5e24-4f8c-a257-c88627b999c5/powerless" target="_blank" rel="noopener">
+                <img src="assets/Powerless.jpg" alt="Powerless">
+            </a>
+        </div>
+        <div class="film-item" data-title="Manager Kim" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/a3c09565-47aa-410c-a137-a3a6e6bfa8a8/manager-kim" target="_blank" rel="noopener">
+                <img src="assets/Manager_Kim.webp" alt="Manager Kim">
+            </a>
+        </div>
+        <div class="film-item" data-title="Study Group" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/24c8e2f3-f515-4e58-bfdd-c423ab00499a/study-group" target="_blank" rel="noopener">
+                <img src="assets/Study_Group_-_Cover_Webtoon.webp" alt="Study Group">
+            </a>
+        </div>
+        <div class="film-item" data-title="Une Education Irreprochable" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/c268a95f-e3d6-4414-981b-6c83c6447f5a/get-schooled" target="_blank" rel="noopener">
+                <img src="assets/une education irreprochable.jpg" alt="Une Education Irreprochable">
+            </a>
+        </div>
+        <div class="film-item" data-title="Trauma Center" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/169140c0-498c-4477-a6bf-79d18f8a7bf8/trauma-center-golden-hour" target="_blank" rel="noopener">
+                <img src="assets/Trauma Center.jpg" alt="Trauma Center">
+            </a>
+        </div>
+        <div class="film-item" data-title="Webtoon Character Na Kang Lim" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/38f386ce-f2dc-4f2b-99f9-522eab56078d/webtoon-character-na-kang-lim" target="_blank" rel="noopener">
+                <img src="assets/Webtoon Character Na Kang Lim.png" alt="Webtoon Character Na Kang Lim">
+            </a>
+        </div>
+        <div class="film-item" data-title="I Was Immediately Mistaken for a Monster Genius Actor" data-rating="★★★½">
+            <a class="film-link" href="https://mangadex.org/title/f1d82e50-4c28-4621-a470-8f107eddeccd/i-was-immediately-mistaken-for-a-monster-genius-actor" target="_blank" rel="noopener">
+                <img src="assets/I Was Immediately Mistaken for a Monster Genius Actor.jpg" alt="I Was Immediately Mistaken for a Monster Genius Actor">
+            </a>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- TOP 10 DRAME / PSYCHO -->
+    <section class="top-section">
+      <h2>Drame / Psychologique</h2>
+      <div class="film-grid">
+      <div class="film-item" data-title="Sweet Home" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/7cc37898-6669-407f-b7a6-f23a2859bc0b/sweet-home" target="_blank" rel="noopener">
+                <img src="assets/sweet_home.jpg" alt="Sweet Home">
+            </a>
+        </div>
+        <div class="film-item" data-title="Mort Imminente" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/42ff706e-5f8d-4c6a-aa85-1da68fdbda50/i-will-die-soon" target="_blank" rel="noopener">
+                <img src="assets/mort_imminente_1_edition_reliee_francaise990623.webp" alt="Mort Imminente">
+            </a>
+        </div>
+        <div class="film-item" data-title="Le Garçon Au Fusil" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/e8c8bc87-0b71-4893-9940-3fbd4bfd386b/shotgun-boy" target="_blank" rel="noopener">
+                <img src="assets/le_garcon_au_fusil.png" alt="Le Garçon Au Fusil">
+            </a>
+        </div>
+        <div class="film-item" data-title="Secret Friend" data-rating="★★★★">
+            <a class="film-link" href="https://www.webtoons.com/fr/thriller/secret-friend/list?title_no=4879" target="_blank" rel="noopener">
+                <img src="assets/Secret_Friend.webp" alt="Secret Friend">
+            </a>
+        </div>
+        <div class="film-item" data-title="Zomgan" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/bb8bfb9f-8c17-48db-8fb1-fa42eed6cba1/zomgan" target="_blank" rel="noopener">
+                <img src="assets/Zomgan_-_Webtoon.webp" alt="Zomgan">
+            </a>
+        </div>
+        <div class="film-item" data-title="Dead Life" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/4da6fe4d-6309-4b75-be74-d8c180bcb674/deadlife" target="_blank" rel="noopener">
+                <img src="assets/dead_life_14367.webp" alt="Dead Life">
+            </a>
+        </div>
+        <div class="film-item" data-title="Un Jour A Séoul" data-rating="★★★★">
+            <a class="film-link" href="https://www.webtoons.com/fr/thriller/un-jour-a-seoul/list?title_no=3490" target="_blank" rel="noopener">
+                <img src="assets/One_Day_Suddenly_Seoul_Is-cover.jpg" alt="Un Jour A Séoul">
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP 10 ROMANCE -->
+    <section class="top-section">
+      <h2>Romance / Réincarnation</h2>
+      <div class="film-grid">
+      <div class="film-item" data-title="La Jacinthe Violette" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/56abe490-6318-4dd2-93d2-f84385d3fcac/purple-hyacinth" target="_blank" rel="noopener">
+                <img src="assets/la_jacinthe_violette-1468221-264-432.webp" alt="La Jacinthe Violette">
+            </a>  
+      </div>
+      <div class="film-item" data-title="La Duchesse Déchue" data-rating="★★★★★">
+            <a class="film-link" href="https://mangadex.org/title/8c6e0eb8-fb94-44a3-9bf4-fa72dee36775/your-throne" target="_blank" rel="noopener">
+                <img src="assets/la_duchesse_dechue_14171.webp" alt="La Duchesse Déchue">
+            </a>
+      </div>
+      <div class="film-item" data-title="I Shall Be The Matriarch" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/f89ed57a-e4c0-48f5-b664-8ef88aa87fd9/ibeon-saengeun-gajuga-doegetseumnida" target="_blank" rel="noopener">
+                <img src="assets/I Shall Be The Matriarch.webp" alt="I Shall Be The Matriarch">
+            </a>
+        </div>
+        <div class="film-item" data-title="The Reason Why Raeliana Ended up at the Duke's Mansion" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/39e55355-dfb4-44e9-bd0b-df1fc3a0e33e/the-reason-why-raeliana-ended-up-at-the-duke-s-mansion" target="_blank" rel="noopener">
+                <img src="assets/The Reason Why Raeliana Ended up at the Duke's Mansion.jpg" alt="The Reason Why Raeliana Ended up at the Duke's Mansion">
+            </a>
+        </div>
+        <div class="film-item" data-title="Villains Are Destined to Die" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/14569f2f-f66a-4c67-ac7f-a37823a0fa23/villains-are-destined-to-die" target="_blank" rel="noopener">
+                <img src="assets/Villains Are Destined to Die.jpg" alt="Villains Are Destined to Die">
+            </a>
+        </div>
+        <div class="film-item" data-title="The Perks of Being a Villainess" data-rating="★★★★½">
+            <a class="film-link" href="https://mangadex.org/title/50e0025c-8747-4edd-987d-baabf2caeb67/the-perks-of-being-a-villainess" target="_blank" rel="noopener">
+                <img src="assets/The Perks of Being a Villainess.jpg" alt="The Perks of Being a Villainess">
+            </a>
+        </div>
+    <div class="film-item" data-title="Je Souhaite Mourir" data-rating="★★★★">
+            <a class="film-link" href="https://www.webtoons.com/fr/romance/cross-my-heart-and-hope-to-die/list?title_no=6289" target="_blank" rel="noopener">
+                <img src="assets/je_souhaite_mourir_26907.webp" alt="Je Souhaite Mourir">
+            </a>
+     </div>
+     <div class="film-item" data-title="Into the Light, Once Again" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/6cfc0541-41e2-4f77-8340-971fdc15bacc/into-the-light-once-again" target="_blank" rel="noopener">
+                <img src="assets/Into the Light, Once Again.jpg" alt="Into the Light, Once Again">
+            </a>
+     </div>
+     <div class="film-item" data-title="The Monstrous Duke's Adopted Daughter" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/50fc2f0f-aeac-4152-82ba-164b3bb3b5b3/the-monstrous-duke-s-adopted-daughter" target="_blank" rel="noopener">
+                <img src="assets/The Monstrous Duke's Adopted Daughter.jpg" alt="The Monstrous Duke's Adopted Daughter">
+            </a>
+     </div>
+     <div class="film-item" data-title="Belle Mère en Mode Survie" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/7d904358-2de3-423b-a38e-8586694b5861/a-simple-guide-to-surviving-as-a-stepmom" target="_blank" rel="noopener">
+                <img src="assets/belle-mere_en_mode_survie_vo_27190.webp" alt="Belle Mère en Mode Survie">
+            </a>
+     </div>
+     <div class="film-item" data-title="Resetting Lady" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/7f7d765f-3d87-41f9-908e-460b96449481/resetting-lady" target="_blank" rel="noopener">
+                <img src="assets/Resetting_Lady_-_Webtoon.webp" alt="Resetting Lady">
+            </a>
+     </div>
+     <div class="film-item" data-title="My In-Laws Are Obsessed With Me" data-rating="★★★★">
+            <a class="film-link" href="https://mangadex.org/title/c44b5b1d-60cf-4faf-be2c-0a807200358f/my-in-laws-are-obsessed-with-me" target="_blank" rel="noopener">
+                <img src="assets/My_In-Laws_Are_Obsessed_with_Me.webp" alt="My In-Laws Are Obsessed With Me">
+            </a>
+     </div>
+     <div class="film-item" data-title="Le Bébé Tyran" data-rating="★★★★">
+            <a class="film-link" href="https://www.webtoons.com/fr/fantasy/bebe-tyran/list?title_no=5576" target="_blank" rel="noopener">
+                <img src="assets/le_bebe_tyran-5684054-264-432.webp" alt="Le Bébé Tyran">
+            </a>
+     </div>
+
+      </div>
+    </section>
+  </main>
+
+<footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+   <div id="retour-btn-container">
+    <a href="Mes_passions.html" id="retour-btn">Return</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      });
+    });
+  </script>
+  <script>
+    // Bouton scroll vers le haut
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile – Bastien Labeste</title>
+  <link rel="stylesheet" href="Qui-suis-je-style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header> 
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Profile</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="Career-Path.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+ 
+  <!-- STORY SECTIONS -->
+  <div class="container" id="first-container" style="margin-top: 8.5%;">
+    <div class="console">
+      <code><p>Narrator> In the digital world, every hero has a starting point... Meet Bastien, 20 years old, a student at ENSEEIHT in the Digital Sciences department, exploring systems and crafting code.
+</p></code>
+    </div>
+  </div>
+  <div class="container" id="second-container" style="display: none;">
+    <div class="console"><code><p>Unknown> Just another student?</p></code></div>
+  </div>
+  <div class="container" id="third-container" style="display: none;">
+    <div class="console"><code><p>Narrator> Not quite. Balancing academic studies and an apprenticeship at oXya, he develops skills in system administration, programming, and networking.
+</p></code></div>
+  </div>
+  <div class="container" id="fourth-container" style="display: none;">
+    <div class="console"><code><p>Unknown> A future key player in the IT world, then...
+</p></code></div>
+  </div> 
+  <div class="container" id="fifth-container" style="display: none;">
+    <div class="console"><code><p>Narrator> Exactly. This portfolio is just the first step of his journey, blending theoretical knowledge with hands-on experience.
+</p></code></div>
+  </div>
+  <!-- ELEVATOR SPEECH BUTTON -->
+<div id="speech-btn-container">
+  <a href="competence6.html" id="speech-btn" title="My Elevator Speech">
+    <img src="triangle-icon.png" alt="Micro Icon">
+    <span>Elevator Speech</span>
+  </a>
+</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+
+  <!-- BUTTONS -->
+  <div id="retour-btn-container">
+    <a href="index.html" id="retour-btn">Return</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <!-- JS -->
+  <script>
+    var CHAR_TIME = 15;
+    function animateParagraph(selector, onComplete) {
+      var paragraph = document.querySelector(selector);
+      var text = paragraph.textContent.trim();
+      paragraph.textContent = "";
+      var index = 0;
+      function addChar() {
+        if (index < text.length) {
+          var span = document.createElement("span");
+          span.classList.add("char");
+          span.textContent = text.charAt(index++);
+          paragraph.appendChild(span);
+          setTimeout(() => span.classList.add("fade-in"), CHAR_TIME / 2);
+          var cursor = document.createElement("span");
+          cursor.textContent = "▌";
+          cursor.classList.add("cursor");
+          paragraph.appendChild(cursor);
+          setTimeout(() => {
+            cursor.remove();
+            addChar();
+          }, CHAR_TIME);
+        } else if (onComplete) onComplete();
+      }
+      setTimeout(addChar, 350);
+    }
+    var containers = ["#first-container", "#second-container", "#third-container", "#fourth-container", "#fifth-container"];
+    var current = 0;
+    function animateNext() {
+      if (current < containers.length) {
+        var c = document.querySelector(containers[current]);
+        c.style.display = "block";
+        c.style.opacity = 1;
+        animateParagraph(containers[current] + " p", () => { current++; animateNext(); });
+      }
+    }
+    window.onload = () => setTimeout(animateNext, 800);
+
+    // Scroll to top
+    const mybutton = document.getElementById("myBtn");
+    window.onscroll = () => {
+      mybutton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    // Toggle Menu
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      });
+    });
+  </script>
+  <script>
+  window.addEventListener("scroll", () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+
+    if (scrolled >= scrollable - 50) {
+      document.body.classList.add("scrolled-to-bottom");
+    } else {
+      document.body.classList.remove("scrolled-to-bottom");
+    }
+  });
+
+
+  
+</script>
+
+</body>
+</html>

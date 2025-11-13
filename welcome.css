@@ -1,0 +1,329 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(PS5-start-background.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Texte de bienvenue */
+.welcome-container {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 3%;
+}
+
+#welcome-message {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#instruction-text {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Cercle animé principal */
+.circle-container {
+    position: absolute;
+    top: 46%;
+    left: 43.5%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 60%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: pulse 3s infinite;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.circle-container img {
+    width: 60%;
+    height: auto;
+}
+
+.outer-circle {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: outer-pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes outer-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+
+/* Animation au clic */
+.fade-out {
+    animation: ps5-fade-out 1s forwards;
+}
+
+@keyframes ps5-fade-out {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+        filter: blur(2px);
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+        filter: blur(4px);
+    }
+}
+
+/* Profil */
+.profile-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.profile-selector.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile.active {
+    transform: scale(1.2);
+}
+
+#profile-description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Particules d'arrière-plan */
+.background-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    animation: move-particle 8s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes move-particle {
+    from {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Ajoute un curseur de type "main" pour le cercle animé */
+.circle-container {
+    cursor: pointer; /* Change ici pour afficher une petite main */
+}
+
+/* Ajoute un curseur de type "main" pour les profils */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer; /* Change ici pour afficher une petite main */
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Écran de message d'accueil */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8) url("accueil.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#welcome-screen.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.welcome-overlay {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.welcome-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.welcome-overlay p {
+    font-size: 1.5rem;
+}
+
+
+#action-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.action-button {
+  padding: 0.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+ 
+/* =========================
+   Écran de transition (fond transparent)
+   ========================= */
+#transition-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 999;       /* devant tout le reste */
+}
+
+#transition-screen.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+#transition-screen h1 {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 10px #000;
+}
+
+.circle-container {
+        top : 40%;
+        left : 45%;
+    }
+
+    .welcome-container {
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+    
+@media (min-width: 1600px) {
+
+    .circle-container {
+        top : 40%;
+        left : 44%;
+    }
+    .welcome-container {
+        margin-top: 1%;
+        margin-left: -1%;
+    }
+
+ 
+
+    .profile-selector {
+        margin-left: -5%;
+
+    }
+    
+    #profile-description { 
+        margin-left: -5%;
+    }
+    #action-container {
+        margin-left: -5%;
+    }
+
+    #arrow-indicator {
+        right: 95%;
+    }
+}

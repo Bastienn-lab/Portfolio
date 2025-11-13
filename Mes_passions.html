@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passions & Interests – Bastien Labeste</title>
+
+    <!--JS-->
+    <script src="https://kit.fontawesome.com/67284cce80.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="Mes_passions_style.css">
+</head>
+<body>
+    <header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Passions & Interests</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="Civic-Engagement.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header> 
+    <main> 
+        <ul class='slider'>
+          <li class='item' style="background-image: url('musique.jpg')">
+            <div class='content'>
+              <h2 class='title'>"Music"</h2>
+              <p class='description'> Music is my personal universe, where rhythms and lyrics create emotions. I enjoy French hip-hop, calm rap, hyperpop, and French pop. Every song tells a story, a dream, or a challenge. Click "See more" to explore these musical worlds with me. </p>
+              <button onclick="location.href='https\://open.spotify.com/playlist/7kuvJ8J6lbf3eDvanMoHnJ?si=5BINMfP_QXaj8m0BIv2Apg&pi=7rWzNxikRcOXd&pt=6d43ed8fe9fb88eadd0c844a3885a9d8'">See more</button>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('jeuvideo.avif')">
+            <div class='content'>
+              <h2 class='title'>"Video Games"</h2>
+              <p class='description'> Video games are gateways to new worlds. From action games to RPGs, each game is a unique adventure. They shape my creativity, strategy, and problem-solving skills. Click "See more" to see how gaming influences me. </p>
+              <button onclick="location.href='jeux-videos.html'">See more</button>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('films.jpeg')">
+            <div class='content'> 
+              <h2 class='title'>"Films & Animes"</h2>
+              <p class='description'> Films and animes open doors to infinite stories, captivating characters, and unique universes. They inspire my creativity and imagination. Click "See more" to dive into these narratives with me. </p>
+              <button onclick="location.href='https\://letterboxd.com/Bastien___/'">See more</button>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('webtonns.jpg')">
+            <div class='content'>
+              <h2 class='title'>"Webtoons"</h2>
+              <p class='description'>
+                Webtoons are more than comics; they are visual storytelling with deep messages. Each page invites exploration of diverse and enriching worlds. Click "See more" to share my passion for this art.
+              </p>
+              <button onclick="location.href='webtoons.html'">See more</button>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('sport.jpg')">
+            <div class='content'>
+              <h2 class='title'>"Sports"</h2>
+              <p class='description'>
+               Sports are a journey of perseverance, technique, and passion. From tennis and judo to golf and weight training, each discipline shaped my spirit and mindset. Click "See more" to explore my sports experiences.
+              </p>
+              <button onclick="location.href='sport.html'">See more</button>
+            </div>
+          </li> 
+
+        </ul>
+        <div id="retour-btn-container">
+            <a href="index.html" id="retour-btn">Return</a>
+        </div>        
+        <nav class='nav'>
+          <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+          <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+      </main>
+      <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+      
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script>
+        const slider = document.querySelector('.slider');
+
+        function activate(e) {
+          const items = document.querySelectorAll('.item');
+          e.target.matches('.next') && slider.append(items[0])
+          e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+        }
+        
+        document.addEventListener('click',activate,false);
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('#menu-toggle').click(function(event) {
+            event.preventDefault();
+            $('#menu').slideToggle();
+          });
+        });
+      </script>
+</body>
+</html>

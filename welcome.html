@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlayStation Welcome</title>
+  <link rel="stylesheet" href="welcome.css">
+
+  <!-- Ajout : styles pour masquer progressivement le contenu avant la transition -->
+  <style>
+    .fade-all .welcome-container,
+    .fade-all .circle-container,
+    .fade-all .profile-selector,
+    .fade-all #profile-description,
+    .fade-all #action-container {
+      opacity: 0;
+      transition: opacity 0.7s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- Texte de bienvenue -->
+  <div class="welcome-container">
+    <h1 id="welcome-message">Click to start</h1>
+    <p id="instruction-text" class="hidden">Tap on a profile to discover it&nbsp;!</p>
+  </div>
+
+  <!-- Écran de transition (texte seul, fond transparent) -->
+  <div id="transition-screen">
+    <h1>Who is Bastien Labeste&nbsp;?</h1>
+  </div>
+
+  <!-- Cercle animé principal -->
+  <div class="circle-container" id="circle">
+    <div class="logo-animation" style="margin-left: 43px;">
+      <img src="icon-playstation-removebg-preview.png" alt="PlayStation Icon">
+    </div>
+    <div class="outer-circle"></div>
+  </div>
+ 
+  <!-- Sélecteur de profils (caché par défaut) -->
+  <div class="profile-selector hidden" id="profile-selector">
+    <div class="profile" data-name="Ajouter un utilisateur" data-description="Create your profile.">
+      <img src="profil-newUser.png" alt="New user">
+      <p>Add a user</p>
+    </div>
+    <div class="profile" data-name="Bastien Labeste" data-description="Digital science student.">
+      <img src="Avatar-photo.png" alt="Bastien Labeste">
+      <p>Bastien Labeste</p>
+    </div>
+    <div class="profile" data-name="Credits" data-description="Discover the website credits.">
+      <img src="credits-icon.png" alt="Credits">
+      <p>Credits</p>
+    </div>
+  </div>
+
+  <!-- Description dynamique + bouton d'action -->
+  <div id="profile-description"></div>
+  <div id="action-container"></div>
+
+  <!-- Particules d'arrière-plan -->
+  <div class="background-particles" id="background-particles"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const circle             = document.getElementById("circle");
+      const profileSelector    = document.getElementById("profile-selector");
+      const welcomeMessage     = document.getElementById("welcome-message");
+      const instructionText    = document.getElementById("instruction-text");
+      const profiles           = document.querySelectorAll(".profile");
+      const profileDescription = document.getElementById("profile-description");
+      const actionContainer    = document.getElementById("action-container");
+      const transitionScreen   = document.getElementById("transition-screen");
+      let activeIndex = 1;
+
+      // Génération de particules
+      const backgroundParticles = document.getElementById("background-particles");
+      function createParticle() {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+        const size = Math.random() * 10 + 6;
+        p.style.width  = p.style.height = size + "px";
+        p.style.left   = Math.random() * window.innerWidth + "px";
+        p.style.top    = Math.random() * window.innerHeight + "px";
+        p.style.animationDuration = (Math.random() * 5 + 3) + "s";
+        backgroundParticles.appendChild(p);
+        p.addEventListener("animationend", () => p.remove());
+      }
+      setInterval(createParticle, 150);
+
+      // Transition + redirection en deux temps
+      function transitionAndRedirect(url) {
+        // 1) on fait disparaître tout le contenu
+        document.body.classList.add('fade-all');
+        // 2) après la disparition (0.7s), on affiche le texte
+        setTimeout(() => transitionScreen.classList.add('visible'), 700);
+        // 3) après que le texte soit bien en place (2s au total), on redirige
+        setTimeout(() => window.location.href = url, 2500);
+      }
+
+      // Utilitaires pour le bouton
+      function clearActionButton() {
+        actionContainer.innerHTML = "";
+      }
+      function showActionButton(label, href) {
+        clearActionButton();
+        const btn = document.createElement("button");
+        btn.className = "action-button";
+        btn.textContent = label;
+        btn.addEventListener("click", () => {
+          if (href === "Qui-suis-je2.html") {
+            transitionAndRedirect(href);
+          } else {
+            window.location.href = href;
+          }
+        });
+        actionContainer.appendChild(btn);
+      }
+
+      // Met à jour profil + description + bouton
+      function updateActiveProfile(i) {
+        profiles.forEach((p, idx) => p.classList.toggle("active", idx === i));
+        const name = profiles[i].dataset.name;
+        const desc = profiles[i].dataset.description || "";
+        profileDescription.textContent = desc;
+
+        clearActionButton();
+        if (name === "Bastien Labeste") {
+          showActionButton("Enter", "Qui-suis-je2.html");
+        } else if (name === "Credits") {
+          showActionButton("Open the credits", "credits.html");
+        } else {
+          showActionButton("Create a profile", "https://youtu.be/dQw4w9WgXcQ?si=LfowqssLMNEi89bA");
+        }
+      }
+
+      // Clic cercle → révélation profils
+      circle.addEventListener("click", () => {
+        circle.classList.add("fade-out");
+        welcomeMessage.style.display    = "none";
+        instructionText.style.visibility = "visible";
+        instructionText.style.opacity    = "1";
+
+        setTimeout(() => {
+          circle.style.display             = "none";
+          profileSelector.classList.add("visible");
+          updateActiveProfile(activeIndex);
+        }, 1000);
+      });
+
+      // Flèches clavier
+      document.addEventListener("keydown", e => {
+        if (!profileSelector.classList.contains("visible")) return; 
+        if (e.key === "ArrowRight") {
+          activeIndex = (activeIndex + 1) % profiles.length;
+          updateActiveProfile(activeIndex);
+        }
+        if (e.key === "ArrowLeft") {
+          activeIndex = (activeIndex - 1 + profiles.length) % profiles.length;
+          updateActiveProfile(activeIndex);
+        }
+      });
+
+      // Clic profil
+      profiles.forEach((p, idx) => { 
+        p.addEventListener("click", () => {
+          activeIndex = idx;
+          updateActiveProfile(idx);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

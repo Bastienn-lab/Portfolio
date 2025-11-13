@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!--JS-->
+    <script src="https://kit.fontawesome.com/67284cce80.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./portfolio-style.css">
+</head>
+<body onload="startTime()">  
+ 
+    <header> 
+        <div class="left">
+            <a href="index.html" style="font-weight: 100;">Home</a>
+            <a href="#" style="color:white;">Portfolio</a>
+        </div>
+        <div class="right">
+            <a href="https://www.oxya.com/fr/"><img src="logo-single-oxya.png" style="height:70px; border-radius: 50px;" class="oxya_logo" alt="oxya logo"></a>
+            <div class="dropdown">
+                <a href="#">CV<i class="fa-solid fa-download"></i></a>
+                <div class="dropdown-content">
+                    <a href="CV - Bastien Labeste.pdf" download="CV - Bastien Labeste"><img src="fr.webp" style="height:40px; border-radius: 50px; margin-left: 0px;" alt="Français"></a>
+                    <a href="Resume - Bastien Labeste.pdf" download="Resume - Bastien Labeste"><img src="en.png" style="height:40px; border-radius: 50px; margin-left: 0px;" alt="Mail"></a>
+                </div>
+            </div>
+                <a href="http://www.linkedin.com/in/bastienlabeste" ><img src="linkedin-logo.png" style="height:50px; border-radius: 50px; " alt="LinkedIn"></a>
+                
+            
+            <a href="#"><img src="Avatar-photo.png" style="height:80px; border-radius: 50px;" alt="avatar"></a>
+            <div id="clock"></div>
+        </div>
+    </header>
+    <div id="particle-container"></div> 
+    <div class="ps5_startup">
+        <div class="controller">
+          <div id="loading-animation" class="hidden">
+               <span class="triangle" data-animate="false"></span>
+               <span class="circle" data-animate="false"></span>
+               <span class="cross" data-animate="false"></span>
+               <span class="square" data-animate="false"></span>
+            </div>       
+        </div>
+    </div>
+
+    <div id="carousel">
+        <div class="prevLeftSecond" id="signaux">
+            <section>
+                <img src="signaux-photo.png" id="2" alt="projet_futur_logo">
+                <span>Telecommunications</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="signaux-photo.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="projet_futur_logo">
+                    <h1>Linking the world</h1>
+                    <div class="button-left">
+                        <a href="projets-com.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cover">
+                        <img src="photo-telecom.png" style="height: 300px;width: 300px; object-fit: cover;" alt="projet_futur_logo">
+                        <span class="complet">Full section</span>
+                        <span class="update">Version 1.0</span>
+                        <div class="overlay">Preview</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prev" id="informatique">
+            <section>
+                <img src="informatique-photo.png" id="3" alt="projet_futur_logo"> 
+                <span>Computer science</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="informatique-photo.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="projet_futur_logo">
+                    <h1>Code. Create. Innovate.</h1>
+                    <div class="button-left">
+                        <a href="projets-informatique.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cover">
+                        <img src="photo-info.png" style="height: 300px;width: 300px; object-fit: cover;" alt="projet_futur_logo">
+                        <span class="complet">Full section</span>
+                        <span class="update">Version 1.0</span>
+                        <div class="overlay">Preview</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="selected" id="cyber">
+            <section>
+                <img src="cyb-photo.png" id="4" alt="projet_futur_logo">
+                <span>Networks & Cybersecurity</span>
+            </section>
+            <div class="game-info"> 
+                <div class="left">
+                    <img src="cyb-photo.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="projet_futur_logo">
+                    <h1>Secure the future</h1>
+                    <div class="button-left">
+                        <a href="projets-cyber.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    
+                    <div class="cover">
+                        <img src="photo-reseau-cyber.png" style="height: 300px;width: 300px; object-fit: cover;" alt="projet_futur_logo">
+                        <span class="complet">Full section</span>
+                        <span class="update">Version 1.0</span>
+                        <div class="overlay">Preview</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="next" id="gestion">
+            <section>
+                <img src="gestion-photo.png" id="5" alt="projet_futur_logo">
+                <span>Communication</span>
+            </section>
+            <div class="game-info">
+                <div class="left">
+                    <img src="gestion-photo.png" style="height:140px; border-radius: 50px; visibility: hidden;" alt="projet_futur_logo">
+                    <h1>Connect and share</h1>
+                    <div class="button-left">
+                        <a href="projets-orga.html">Open</a>
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cover">
+                        <img src="photo-comm.png" style="height: 300px;width: 300px; object-fit: cover;" alt="projet_futur_logo">
+                        <span class="complet">Full section</span>
+                        <span class="update">Version 1.0</span>
+                        <div class="overlay">Preview</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let lastClickedElement = null;
+
+        function moveToSelected(element) {
+            if (element == "next") {
+                var selected = $(".selected").next();
+            } else if (element == "prev") {
+                var selected = $(".selected").prev();
+            } else {
+                var selected = element;
+            }
+
+            var next = $(selected).next();
+            var prev = $(selected).prev();
+            var prevSecond = $(prev).prev();
+            var nextSecond = $(next).next();
+
+            $(selected).removeClass().addClass("selected");
+            $(prev).removeClass().addClass("prev");
+            $(next).removeClass().addClass("next");
+            $(nextSecond).removeClass().addClass("nextRightSecond");
+            $(prevSecond).removeClass().addClass("prevLeftSecond");
+            $(nextSecond).nextAll().removeClass().addClass('hideRight');
+            $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+        }
+
+        // Eventos teclado
+        $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                    moveToSelected('prev');
+                    break;
+
+                case 39: // right
+                    moveToSelected('next');
+                    break;
+
+                default: return;
+            }
+            e.preventDefault();
+        });
+
+        $('#carousel > div').click(function() {
+            if ($(this).hasClass('selected')) {
+                if (lastClickedElement === this) {
+                    const id = $(this).attr('id');
+                    const pageMap = {
+                        'signaux': 'projets-com.html',
+                        'informatique': 'projets-informatique.html',
+                        'cyber': 'projets-cyber.html',
+                        'gestion': 'projets-orga.html'
+                    };
+                    if (id && pageMap[id]) {
+                        window.location.href = pageMap[id];
+                    }
+                } else {
+                    lastClickedElement = this;
+                }
+            } else {
+                moveToSelected($(this));
+                lastClickedElement = this;
+            }
+        });
+
+        $('#prev').click(function() {
+            moveToSelected('prev');
+        });
+
+        $('#next').click(function() {
+            moveToSelected('next');
+        });
+
+        // Set background image change
+        for (let i = 1; i <= 6; i++) {
+            $(`#${i}`).on('click', function() {
+                $('body').css('background-image', 'url(fond-play.webp)');
+            });
+        }
+
+        // Dropdown visibility management
+        document.querySelector('.dropdown').onmouseleave = function() {
+            setTimeout(function() {
+                document.querySelector('.dropdown-content').style.display = 'none';
+            }, 3000); // Définir le délai ici
+        };
+
+        document.querySelector('.dropdown').onmouseenter = function() {
+            document.querySelector('.dropdown-content').style.display = 'block';
+        };
+
+        // Clock function
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            m = checkTime(m);
+            document.getElementById('clock').innerHTML =  h + ":" + m;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};
+            return i;
+        }
+    </script>
+    <script>
+        const particleContainer = document.getElementById('particle-container');
+
+        // Formes possibles
+        const shapes = ['○', '×', '□', '△'];
+
+        // Fonction pour générer une particule
+        function createParticle() {
+            let particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Sélection aléatoire d'une forme
+            let shape = shapes[Math.floor(Math.random() * shapes.length)];
+            particle.textContent = shape;
+
+            // Taille, opacité et position aléatoires
+            let size = Math.random() * 20 + 10; // Taille entre 10 et 30px
+            let opacity = Math.random() * 0.7 + 0.3; // Opacité entre 0.3 et 1
+            let x = Math.random() * 100; // Position x aléatoire (en pourcentage)
+            let y = Math.random() * 100; // Position y aléatoire (en pourcentage)
+            let endX = x + (Math.random() * 50 - 25); // Déplacement aléatoire sur l'axe X
+            let endY = y + (Math.random() * 50 - 25); // Déplacement aléatoire sur l'axe Y
+            let duration = Math.random() * 15 + 10; // Durée aléatoire entre 10 et 25s
+
+            // Application des styles
+            particle.style.cssText = `
+                position: absolute;
+                top: ${y}%;
+                left: ${x}%;
+                font-size: ${size}px;
+                color: white;
+                opacity: ${opacity};
+                transform: translate(-50%, -50%);
+                animation: particle-animation ${duration}s linear infinite,
+                        fade-out ${duration}s linear forwards;
+                --endX: ${endX}%;
+                --endY: ${endY}%;
+                --duration: ${duration}s;
+            `;
+
+            particleContainer.appendChild(particle);
+
+            // Supprimer la particule après l'animation
+            setTimeout(() => {
+                particle.remove();
+            }, duration * 1000); // Durée max de l'animation
+        }
+
+        // Générer des particules à intervalles réguliers
+        setInterval(() => {
+            createParticle();
+        }, 500); // Une particule toutes les 500ms
+
+       
+      </script>
+</body>
+</html>

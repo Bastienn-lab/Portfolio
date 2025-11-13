@@ -1,0 +1,465 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #7E7E7E;
+}
+
+header { 
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(2, 2, 2, 0.519);
+    color: white;
+    padding: 1em 0;
+    border-block-end: 2px solid white;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    position: relative;
+}
+
+.header-left a,
+.header-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.header-center a {
+    color: white;
+    text-decoration: none;
+    margin: 0 50px;
+}
+ 
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(2, 2, 2, 0.9);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: -25%;
+}
+
+#preuves {
+    height: fit-content;
+    flex-basis: 50%;
+    color: white;
+    padding: 15px;
+    background-color: rgba(2, 2, 2, 0.519);
+    margin-right: 20px;
+    box-sizing: border-box;
+    margin-left: 1%;
+    margin-top: 2.5%;
+}
+
+.sidebar {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: -7.5%;
+    margin-top: 3%;
+}
+
+#outils, #Langage {
+    padding: 6px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    margin: -4px 0;
+}
+
+#outils ul, #Langage ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 42px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
+    background-color: rgba(2, 2, 2, 0.519);
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    font-weight: bold;
+}
+
+#myBtn:hover {
+    background-color: rgba(80, 80, 80, 0.938);
+}
+
+#retour-btn-container {
+    position: fixed;
+    left: 20px;
+    bottom: 42px;
+    z-index: 1000;
+}
+
+#retour-btn {
+    background-color: rgba(2, 2, 2, 0.519);
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#retour-btn:hover {
+    background-color: rgba(80, 80, 80, 0.938);
+}
+
+@media screen and (max-width: 600px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    #preuves, .sidebar {
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+
+    header nav a {
+        margin: 0 15px;
+    }
+} 
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.project-item {
+    width: 45%;
+    margin: 1.5%;
+    position: relative;
+    height: 300px; /* Définissez une hauteur fixe pour que toutes les images aient la même taille */
+    overflow: hidden;
+}
+
+.project-item2 {
+    width: 75%;
+    margin: 1.5%;
+    position: relative;
+    height: 500px; /* Définissez une hauteur fixe pour que toutes les images aient la même taille */
+    object-fit: cover; /* Cela garantit que les images conservent leurs proportions tout en remplissant le conteneur */
+    overflow: hidden;
+}
+
+.project-item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assurez-vous que l'image est bien contenue dans le conteneur sans être coupée */
+}
+
+.project-item a img {
+    width: 100%;
+    height: 100%; /* Assurez-vous que les images remplissent complètement le conteneur */
+    object-fit: cover; /* Cela garantit que les images conservent leurs proportions tout en remplissant le conteneur */
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+}
+
+.project-item:hover img, .project-item:hover .image-overlay {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.arrow.right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.arrow:hover {
+    background-color: rgba(202, 202, 202, 0.87);
+}
+
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+}
+
+.project-item:hover img, .project-item:hover .image-overlay {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #7E7E7E;
+  color: white;
+  padding-top: 100px;
+}
+
+/* Bandes lumineuses sur les côtés */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.25), transparent);
+  z-index: -1;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0; 
+}
+
+body {
+  background:
+    linear-gradient(135deg, #5e5e5e, #2f2f2f),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 2px, transparent 20px);
+  background-blend-mode: overlay;
+}
+
+header {
+  width: 100%;
+  height: 13.3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(2, 2, 2, 0.519);
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 1.05% 0;
+  border-bottom: 2px solid white;
+}
+.header-left, .header-center, .header-right { display: flex; align-items: center; }
+.header-left { position: relative; }
+.header-left a, .header-right a { color: white; text-decoration: none; margin: 0 20px; }
+.page-title { font-size: 1.6em; font-weight: bold; text-align: center; }
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: -7%;
+  padding: 1em;
+  border-top: 1px solid white;
+  font-size: 0.9em;
+  color: #e0e0e0;
+  background-color: rgba(2,2,2,0.519);
+  width: 100%;
+  
+}
+
+
+#retour-btn-container {
+  position: fixed;
+  left: 1%;
+  bottom: 3.25%;
+  z-index: 1000;
+}
+
+#retour-btn {
+  background-color: rgba(2, 2, 2, 0.519);
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#retour-btn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  right: 1%;
+  bottom: 2.25%;
+  z-index: 99;
+  outline: none;
+  background-color: rgba(2, 2, 2, 0.519);
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+#myBtn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+/* ===== Ajustements uniquement pour écrans très larges ===== */
+@media (min-width: 1600px) {
+
+
+/* === HEADER === */
+header {
+  width: 100%;
+  height: 12%;
+  flex: 0 0 13.2%;
+  background-color: rgba(2, 2, 2, 0.519);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border-bottom: 2px solid white;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+
+
+/* === FOOTER === */
+footer {
+  width: 100%;
+  padding: 1.2%;
+  
+}
+
+#retour-btn-container {
+  position: fixed;
+  left: 1%;
+  bottom: 3.5%; 
+  z-index: 1000; 
+}
+
+#myBtn {
+  bottom: 3.5%;
+  right: 1%;
+ 
+}
+
+/* Empêche le scroll horizontal */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+}

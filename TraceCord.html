@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceCord – Discord message analysis application</title>
+    <link rel="stylesheet" href="TraceCord.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">
+                    <li><a href="projets-com.html">Telecommunications</a></li>
+                    
+                    <li><a href="projets-informatique.html">Computer science</a></li>
+                    
+                    <li><a href="projets-cyber.html">Networks & Cybersecurity</a></li>
+                    
+                    <li><a href="projets-orga.html">Communication</a></li>
+                    
+                </ul>  
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">TraceCord – Discord message analysis application</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="competence2.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+
+    <div class="main-container">
+        <div class="content-container">
+            <section id="preuves">
+                <h2 style="text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);">TraceCord – Discord message analysis application</h2>
+                <p style="font-size: 20px;">
+                    As part of SAE 302, I participated in the development of TraceCord, an Android application connected to a PHP/MySQL server, allowing the display of Discord user messages and analyzing their toxicity.
+                </p><p style="font-size: 20px;">
+                   The project relies on a Python bot to extract messages, a PHP REST API to access the database, and a mobile interface developed in Java using Android Studio.
+                </p><p style="font-size: 20px;">
+                   This project allowed me to deepen my skills in distributed web architecture, server deployment (Apache/MariaDB), and inter-service communication via APIs.
+                </p>
+            </section>
+
+            <div class="sidebar">
+                <section id="outils">
+                    <h2>Tools Used</h2>
+                    <ul>
+                        <li>Android Studio</li>
+                        <li>Apache 2</li>
+                        <li>MariaDB</li>
+                        <li>phpMyAdmin</li>
+                    </ul>
+                </section>
+                <section id="Langage">
+                    <h2>Languages Used</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                </section> 
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <div class="project-item2">
+                <div class="arrow left" onclick="changeImage(-1)">&#10094;</div>
+                <a id="project-item2-link" href="slide1-tc.png">
+                    <img id="project-item2-img" src="slide1-tc.png" alt="Projet 1">
+                </a>
+                <div class="arrow right" onclick="changeImage(1)">&#10095;</div>
+            </div>
+            <div class="project-item">
+                <a href="Installation (1).pdf">
+                    <img src="docdisntall-photo.png" alt="Projet 2">
+                    <div class="image-overlay">Installation Documentation</div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="Fonctionnement (1).pdf">
+                    <img src="docdefonctionnement-photo.png" alt="Projet 3">
+                    <div class="image-overlay">User Guide</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+         <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+    <div id="retour-btn-container">
+        <a href="projets-informatique.html" id="retour-btn">Return</a>
+    </div>
+    <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      }); 
+    });
+  </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+    
+
+      var images = [
+        {src: "slide1-tc.png", link: "slide1-tc.png"},
+        {src: "slide2-tc.png", link: "slide2-tc.png"},
+        {src: "slide3-tc.png", link: "slide3-tc.png"},
+        {src: "slide4-tc.png", link: "slide4-tc.png"},
+        {src: "slide5-tc.png", link: "slide5-tc.png"},
+        {src: "slide6-tc.png", link: "slide6-tc.png"},
+        {src: "slide7-tc.png", link: "slide7-tc.png"},
+        {src: "slide8-tc.png", link: "slide8-tc.png"},
+        {src: "slide9-tc.png", link: "slide9-tc.png"},
+        {src: "slide10-tc.png", link: "slide10-tc.png"},
+        {src: "slide11-tc.png", link: "slide11-tc.png"},
+      ];
+      var currentIndex = 0;
+
+      function changeImage(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+          currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+          currentIndex = 0;
+        }
+        document.getElementById("project-item2-img").src = images[currentIndex].src;
+        document.getElementById("project-item2-link").href = images[currentIndex].link;
+      }
+    </script> 
+</body>
+</html>

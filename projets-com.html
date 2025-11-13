@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecommunications – Bastien Labeste</title>
+    <link rel="stylesheet" href="projets-com.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">
+                    <li><a href="projets-com.html">Telecommunications</a></li>
+                    
+                    <li><a href="projets-informatique.html">Computer science</a></li>
+                    
+                    <li><a href="projets-cyber.html">Networks & Cybersecurity</a></li>
+                    
+                    <li><a href="projets-orga.html">Communication</a></li>
+                    
+                </ul>  
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Telecommunications</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="projets-informatique.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+    <main class="page-content">
+        <div class="card background-card4">
+            <div class="content">
+                <div class="overlay-title" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <h2 class="title">Measuring and characterizing a signal or system</h2>
+                </div>
+                <div class="overlay"> 
+                    <h2 class="title">Measuring and characterizing a signal or system</h2>
+                    <p class="copy">Theoretical and practical study of a coaxial cable.</p>
+                    <a href="competence7.html"><button class="btn">View Project</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="card background-card1">
+            <div class="content">
+                <div class="overlay-title" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <h2 class="title">Audio / Video stream handling with GStreamer</h2>
+                </div>
+                <div class="overlay"> 
+                    <h2 class="title">Audio / Video stream handling with GStreamer</h2>
+                    <p class="copy">Practical processing of audio and video streams using GStreamer.</p>
+                    <a href="GStreamer.html"><button class="btn">View Project</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="card background-card2">
+            <div class="content">
+                <div class="overlay-title" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <h2 class="title">TV Transmission</h2>
+                </div>
+                <div class="overlay"> 
+                    <h2 class="title">TV Transmission</h2>
+                    <p class="copy">Theoretical and practical study of digital television broadcasting.</p>
+                    <a href="Transmission TV.html"><button class="btn">View Project</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres cartes de projet ici de la même manière -->
+    </main>
+    <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+    <div id="retour-btn-container">
+        <a href="Page2.html" id="retour-btn">Return</a>
+    </div>
+    <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      }); 
+    });
+  </script>
+</body>
+</html>
+ 

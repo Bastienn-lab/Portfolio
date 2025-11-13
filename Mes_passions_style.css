@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #7E7E7E;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  background-color: rgba(2, 2, 2, 0.519);
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1em 0;
+  border-block-end: 2px solid white;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  position: relative;
+}
+
+.header-left a,
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.header-center a {
+  color: white;
+  text-decoration: none;
+  margin: 0 50px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(2, 2, 2, 0.9);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Styles existants */
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px; /* Ensure the main content is not hidden behind the fixed header */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.item {
+  width: 200px;
+  height: 300px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+.item:nth-child(1), .item:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.item:nth-child(3) { left: 50%; }
+.item:nth-child(4) { left: calc(50% + 220px); }
+.item:nth-child(5) { left: calc(50% + 440px); }
+.item:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+
+.content {
+  width: min(30vw,400px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem ;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  display: none;
+  background-color: rgba(2, 2, 2, 0.519);
+}
+
+.content .title {
+
+  text-transform: uppercase;
+}
+
+.content .description {
+  line-height: 1.7;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+}
+
+.content button {
+  width: fit-content;
+  background-color: rgba(2, 2, 2, 0.519);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.content button:hover {
+  background-color: rgba(80, 80, 80, 0.938); /* Changement de couleur au survol */
+}
+
+.item:nth-of-type(2) .content {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+}
+
+.nav .btn {
+  background-color: rgba(2, 2, 2, 0.519);
+  color: white;
+  border: 2px solid white; 
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav .btn:hover {
+  background-color: rgba(80, 80, 80, 0.938);
+}
+
+#retour-btn-container {
+  position: fixed;
+  left: 1%;
+  bottom: 3.25%;
+  z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+}
+
+#retour-btn {
+  background-color: rgba(2, 2, 2, 0.519); /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espace intérieur du bouton */
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  text-decoration: none; /* Supprime le soulignement du lien */
+  font-weight: bold; /* Rend le texte en gras */
+}
+
+#retour-btn:hover {
+  background-color: rgba(80, 80, 80, 0.938); /* Changement de couleur au survol */
+}
+
+@media (width > 650px) and (width < 900px) {
+  #retour-btn-container {
+    width: auto; /* Réinitialiser la largeur pour permettre un centrage naturel */
+    top: 68%;
+  }
+
+  .content .title { font-size: 1rem; }
+  .content .description { font-size: 0.7rem; }
+  .content button { font-size: 0.7rem; }
+
+  .item {
+    width: 160px;
+    height: 270px;
+  }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 170px); }
+  .item:nth-child(5) { left: calc(50% + 340px); }
+  .item:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+
+  #retour-btn-container,
+  #myBtn {
+      bottom: 20px; /* Positionnement des boutons ajusté */
+      right: 20px; /* Position du bouton flèche vers le haut */
+  }
+}
+
+@media (width < 650px) {
+  #retour-btn-container {
+    width: auto; /* Réinitialiser la largeur pour permettre un centrage naturel */
+    top: 46%;
+    left: 36%;
+  }
+
+  .content .title { font-size: 0.9rem; }
+  .content .description { font-size: 0.65rem; }
+  .content button { font-size: 0.7rem; }
+
+  .item {
+    width: 130px;
+    height: 220px;
+  }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 140px); }
+  .item:nth-child(5) { left: calc(50% + 280px); }
+  .item:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+
+  #retour-btn-container,
+  #myBtn {
+      bottom: 15px; /* Positionnement des boutons ajusté */
+      right: 15px; /* Position du bouton flèche vers le haut */
+  }
+}
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 13.2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(39, 39, 39);
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  border-bottom: 2px solid white;
+}
+.header-left, .header-center, .header-right { display: flex; align-items: center; }
+.header-left { position: relative; }
+.header-left a, .header-right a { color: white; text-decoration: none; margin: 0 20px; }
+.page-title { font-size: 1.6em; font-weight: bold; text-align: center; }
+
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0%;
+  padding: 1em;
+  border-top: 1px solid white;
+  font-size: 0.9em;
+  color: #e0e0e0;
+  background-color: rgb(39, 39, 39);
+  width: 100%;
+  
+}
+
+/* ===== Ajustements uniquement pour écrans très larges ===== */
+@media (min-width: 1600px) {
+
+/* === BASE POUR LES PAGES === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, #5e5e5e, #2f2f2f),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 2px, transparent 20px);
+  background-blend-mode: overlay;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === HEADER === */
+header {
+  width: 100%;
+  height: 12%;
+  flex: 0 0 13.2%;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border-bottom: 2px solid white;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+
+.content {
+  left: 6rem;
+  width: 600px;
+  padding-inline: 1%;
+
+}
+
+.content button {
+  margin-bottom: 1%;
+
+}
+
+.nav {
+  bottom: 15%;
+}
+/* === FOOTER === */
+footer {
+  width: 100%;
+  height: 10%;
+  flex: 0 0 13.2%;
+  
+  border-top: 1px solid white;
+  color: #e0e0e0; 
+  text-align: center;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#retour-btn-container {
+  position: fixed;
+  left: 1%;
+  bottom: 3.5%; 
+  z-index: 1000; 
+}
+
+
+}

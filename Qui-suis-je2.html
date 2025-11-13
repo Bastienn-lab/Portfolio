@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qui suis-je ?</title>
+  <link rel="stylesheet" href="Qui-suis-je2.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="background-particles" id="background-particles"></div>
+  <!-- EN-TÊTE AVATAR + NOM ANIMÉ -->
+  <div id="header-intro">
+    <img src="Avatar-photo.png" alt="Avatar Bastien" id="intro-avatar">
+    <p id="intro-name">Bastien Labeste</p>
+  </div>
+
+<div class="container" id="hero-card" style="margin-top: 8.5%;">
+  <div class="console">
+    <code>
+      <p id="hero-text">
+Name: Bastien Labeste  
+Age: 20  
+Current School: ENSEEIHT – Digital Sciences  
+Current Company: oXya (Apprenticeship)  
+Education Level: Bac+2 (DUT R&T)
+Driving License: B  
+Languages: French 🇫🇷 (Native), English 🇬🇧 (B2), Spanish 🇪🇸 (B1)  
+Hobbies: Films, Webtoons, Video Games, Sports, Music 
+Resume:
+      </p>
+    </code>
+
+    <div class="hero-buttons">
+      <div class="resume-line">
+        <a href="CV - Bastien Labeste.pdf" class="cv-flag" target="_blank"><img src="fr.webp" alt="Français"></a>
+        <a href="Resume - Bastien Labeste.pdf" class="cv-flag" target="_blank"><img src="en.png" alt="English"></a>
+      </div>
+      <a href="competence6.html" class="btn">Elevator Speech</a>
+      <a href="Page2.html" class="btn">Study Projects</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="retour-btn-container">
+  <a href="index.html" id="retour-btn">Continue</a>
+</div>
+
+  </div>
+  <div id="arrow-wrapper" style="display: none;">
+    <img src="flèche-bas.png" alt="Flèche vers le bas" id="arrow-indicator"
+         style="width:5%; position:absolute; top:85%;">
+  </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+<script>
+function createParticle() {
+  const p = document.createElement("div");
+  p.classList.add("particle");
+  const size = Math.random() * 10 + 6;
+  p.style.width = p.style.height = size + "px";
+  p.style.left = Math.random() * window.innerWidth + "px";
+  p.style.top = Math.random() * window.innerHeight + "px";
+  p.style.animationDuration = (Math.random() * 5 + 3) + "s";
+  document.getElementById("background-particles").appendChild(p);
+  p.addEventListener("animationend", () => p.remove());
+}
+setInterval(createParticle, 150);
+
+const CHAR_TIME = 15;
+
+function animateParagraph(selector, onComplete) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  const text = el.textContent.trim();
+  el.textContent = "";
+  let idx = 0;
+
+  function addChar() {
+    if (idx < text.length) {
+      const span = document.createElement("span");
+      span.className = "char";
+      span.textContent = text[idx++];
+      el.appendChild(span);
+      setTimeout(() => span.classList.add("fade-in"), CHAR_TIME / 2);
+
+      const cursor = document.createElement("span");
+      cursor.className = "cursor";
+      cursor.textContent = "▌";
+      el.appendChild(cursor);
+
+      setTimeout(() => {
+        cursor.remove();
+        addChar();
+      }, CHAR_TIME);
+    } else if (onComplete) {
+      onComplete();
+    }
+  }
+
+  setTimeout(addChar, 350);
+}
+
+function animateHeroCard() {
+  const ctn = document.querySelector("#hero-card");
+  const buttons = document.querySelector(".hero-buttons");
+  ctn.style.display = "block";
+  ctn.style.opacity = 1;
+
+  animateParagraph("#hero-text", function () {
+    // Affiche les boutons avec un effet de fondu vertical
+    if (buttons) {
+      buttons.style.display = "flex";
+      buttons.style.opacity = "0";
+      buttons.style.transform = "translateY(10px)";
+      buttons.style.transition = "opacity 1s ease, transform 0.8s ease";
+      setTimeout(() => {
+        buttons.style.opacity = "1";
+        buttons.style.transform = "translateY(0)";
+      }, 300);
+    }
+  });
+}
+
+window.onload = function () {
+  animateParagraph("#intro-name", function () {
+    setTimeout(animateHeroCard, 800);
+  });
+};
+</script>
+
+
+
+  <script>
+  // flèche après le 5e
+  const fifthContainer = document.getElementById("hero-card");
+  const arrowWrapper   = document.getElementById("arrow-wrapper");
+  const observer = new MutationObserver(() => {
+    if (getComputedStyle(fifthContainer).display !== "none") {
+      setTimeout(() => arrowWrapper.style.display = "block", 1000);
+      observer.disconnect();
+    }
+  });
+  observer.observe(fifthContainer, { attributes: true, attributeFilter: ["style"] });
+
+  animateParagraph(sel + " p", function() {
+  // Quand le texte du hero-card est fini :
+  if (sel === "#hero-card") {
+    const buttons = document.querySelector(".hero-buttons");
+    if (buttons) {
+      buttons.style.display = "flex";
+      buttons.style.justifyContent = "center";
+      buttons.style.gap = "15px";
+      buttons.style.marginTop = "20px";
+      buttons.style.opacity = "0";
+      buttons.style.transition = "opacity 0.8s ease-in-out";
+      setTimeout(() => { buttons.style.opacity = "1"; }, 100);
+    }
+  }
+
+  current++;
+  animateNext();
+});
+
+  </script>
+
+</body>
+</html>

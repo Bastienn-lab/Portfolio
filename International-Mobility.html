@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Mobility – Bastien Labeste</title>
+  <link rel="stylesheet" href="International-Mobility.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header> 
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">    
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">International Mobility</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="Mes_passions.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+
+
+
+
+  <main>
+    <!-- Carte d'introduction -->
+    <section class="intro-card">
+    <h2>Mobility Overview</h2>
+    <p>Here are some insights and proofs from my mobility journey, including intercultural reflections.</p>
+
+    <div class="card-icons">
+        <a href="HR-contact.png" target="_blank" title="Show proof of HR contact">
+        <img src="hr-logo.png" alt="HR Proof Icon">
+        </a>
+        <a href="Intercultural-Reflection.pdf" target="_blank" title="Intercultural Reflection">
+        <img src="intercultural-reflection.png" alt="Reflection Icon">
+        </a>
+    </div>
+    </section>
+
+    
+
+    <!-- Bloc 1 -->
+    <section class="mobility-section">
+      <div class="text">
+        <h2>Kobe University – Japon</h2>
+        <p>
+          Kobe University offers the chance to explore cutting-edge technology in an international program. Experiencing life in Japan will broaden my cultural perspective, teaching me flexibility and intercultural communication in a unique setting.
+        </p>
+      </div>
+      <div class="image">
+        <a href="https://www.kobe-u.ac.jp/en/"><img src="kobe.jpg" alt="Kobe University – Japon" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+
+    <!-- Bloc 2 -->
+    <section class="mobility-section">
+      <div class="image">
+        <a href="https://www.tum.de/en/"><img src="TU-Munich.jpg" alt="University of Twente Campus" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+      <div class="text">
+        <h2>TU Munich – Allemagne</h2>
+        <p>
+          At TU Munich, I aim to deepen my knowledge in electronics and AI while engaging in collaborative research. Living in Munich will challenge me to adapt to a new culture and strengthen my independence and problem-solving skills.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloc 3 -->
+    <section class="mobility-section">
+      <div class="text">
+        <h2>Cranfield University – Royaume-Uni</h2>
+        <p>
+          Through Cranfield’s hands-on engineering projects, I hope to apply my skills in electronics and computing in a practical context. Studying in an English-speaking environment will also help me refine my technical communication and collaborate effectively with international peers.
+        </p>
+      </div>
+      <div class="image">
+        <a href="https://www.cranfield.ac.uk/"><img src="Cranfield.jpg" alt="Technical University of Munich - Main Campus" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+
+    <!-- Bloc 4 -->
+    <section class="mobility-section-2">
+      <div class="image">
+        <a href="https://www.dcu.ie/"><img src="DCU.avif" alt="DiscoverEU program travels" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+      <div class="text">
+        <h2>Dublin City University – Ireland</h2>
+        <p>
+          Studying at Dublin City University will allow me to develop my technical skills in electronics and computing while immersed in a vibrant, English-speaking student community. This experience will enhance both my professional abilities and adaptability in international contexts.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+   <div id="retour-btn-container">
+    <a href="index.html" id="retour-btn">Return</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      }); 
+    });
+  </script>
+  <script>
+    // Bouton scroll vers le haut
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+</html>

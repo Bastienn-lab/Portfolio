@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédits</title>
+    <link rel="stylesheet" href="credits.css">
+</head>
+<body>
+    <div class="credits-container">
+        <div class="credits">
+            <h1>Credits</h1>
+            <p>Produced by : Bastien Labeste</p>
+            <p>Directed by : Bastien Labeste</p>
+            <p>Scenario : Bastien Labeste</p>
+            <p>Music : Bastien Labeste</p>
+            <p>Editing : Bastien Labeste</p>
+            <p>Special effects : Bastien Labeste</p>
+            <p>Thanks to : DALL-E</p>
+            <p>Inspired by : PlayStation 5</p>
+        </div>
+    </div>
+    <div id="retour-btn-container">
+        <a href="welcome.html" id="retour-btn">Retour</a>
+    </div>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() { 
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

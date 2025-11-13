@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design of a Secure Computer Network</title>
+    <link rel="stylesheet" href="GNS3.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>  
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">
+                    <li><a href="projets-com.html">Telecommunications</a></li>
+                    
+                    <li><a href="projets-informatique.html">Computer science</a></li>
+                    
+                    <li><a href="projets-cyber.html">Networks & Cybersecurity</a></li>
+                    
+                    <li><a href="projets-orga.html">Communication</a></li>
+                    
+                </ul>  
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Design of a Secure Computer Network</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="competence5.html" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+ 
+
+    <div class="main-container">
+      <div class="content-container">
+        <section id="preuves">
+          <h2 style="text-shadow:3px 3px rgba(0,0,0,0.2);">
+            Design of a Secure Computer Network
+          </h2>
+          <p style="font-size:20px;">
+            As part of SAE 33, we designed a network for a multi-site organization, structured into several VLANs (Employees, Administration, Telephony, WiFi, Management) with an appropriate IP addressing plan. We deployed DHCP, configured Spanning-Tree to prevent loops, implemented HSRP for gateway high availability, and used OSPF for dynamic routing between the different segments.
+          </p>
+          <p style="font-size:20px;">
+            On the security side, a Cisco ASA firewall was configured to filter inbound and outbound traffic, along with an SSL VPN AnyConnect for secure remote access. We also implemented advanced security measures: BPDU guard, DHCP snooping, ARP inspection, and SSH on all critical devices.
+          </p>
+        </section>
+
+        <div class="sidebar">
+          <section id="outils">
+            <h2>Tools Used</h2>
+            <ul>
+              <li>Cisco Packet Tracer</li>
+              <li>GNS3</li>
+              <li>Wireshark</li>
+              <li>Cisco ASA 5505</li>
+            </ul>
+          </section>
+          <section id="Language">
+            <h2>Languages Used</h2>
+            <ul>
+              <li>TCL (scripting Packet Tracer)</li>
+              <li>Cisco IOS CLI</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="project-gallery">
+            <div class="project-item2">
+                <a href="gns3plancomplet.png">
+                    <img src="gns3plancomplet.png" alt="Projet 1" style="width: -webkit-fill-available;">
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="Gestion de projet et organisation de projet.pdf">
+                    <img src="gns3orga.png" alt="Projet 2">
+                    <div class="image-overlay">Project organization</div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="SAé-33.pdf">
+                    <img src="gns3pres.png" alt="Projet 3">
+                    <div class="image-overlay">Project presentation </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+    <div id="retour-btn-container">
+        <a href="projets-cyber.html" id="retour-btn">Return</a>
+    </div>
+    <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      }); 
+    });
+  </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+      
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
+    </script> 
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports – Bastien Labeste</title>
+  <link rel="stylesheet" href="sport-style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header> 
+  <nav>
+    <div class="header-left">
+      <a href="#" id="menu-toggle" style="font-size: 20px; font-weight: bold;">☰ Menu</a>
+      <ul id="menu" class="dropdown-menu">   
+        <li><a href="Mes_passions.html">Passions & Interests</a></li>                 
+        <li><a href="Civic-Engagement.html">Civic Engagement</a></li>
+        <li><a href="Qui-suis-je.html">Profile</a></li>
+        <li><a href="Career-Path.html">Career Path</a></li>
+        <li><a href="International-Mobility.html">International Mobility</a></li>         
+      </ul>
+    </div>
+
+    <div class="header-center">
+      <h2 class="page-title">Sports</h2>
+    </div>
+
+    <div class="header-right">
+      <a href="https://open.spotify.com/playlist/7kuvJ8J6lbf3eDvanMoHnJ?si=5BINMfP_QXaj8m0BIv2Apg&pi=7rWzNxikRcOXd&pt=6d43ed8fe9fb88eadd0c844a3885a9d8" style="font-size: 18px; font-weight: bold;">Next Section →</a>
+    </div>
+  </nav> 
+</header>
+  <main>
+    <!-- Bloc 1 -->
+    <section class="mobility-section">
+      <div class="text">
+        <h2>Tennis (2010 – 2015)</h2>
+        <p>
+          I practiced tennis for five years, a period that taught me precision, patience, and consistency. Training and competing regularly helped me understand the value of discipline and focus, both on and off the court. I enjoyed the strategic aspect of the game — anticipating an opponent’s move, adjusting my playstyle, and staying calm under pressure. These experiences built a mindset of resilience and adaptability that I still apply in everyday life.
+        </p>
+      </div>
+      <div class="image">
+        <a href="#"><img src="tennis.avif" alt="Kobe University – Japon" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+
+    <!-- Bloc 2 -->
+    <section class="mobility-section">
+      <div class="image">
+        <a href="#"><img src="judo.jpg" alt="University of Twente Campus" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+      <div class="text">
+        <h2>Judo (2011 – 2020)</h2>
+        <p>
+          Judo has been a major part of my personal development. Over nearly ten years of practice, I learned much more than physical techniques — I learned respect, perseverance, and humility. Competing and progressing through the ranks required patience and consistency, while the philosophy behind the sport taught me the importance of balance, both mental and physical. Judo helped me build confidence and self-control, which now influence how I handle challenges in academic and professional environments.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloc 3 -->
+    <section class="mobility-section">
+      <div class="text">
+        <h2>Golf (2017 – 2023)</h2>
+        <p>
+          Golf taught me the importance of focus, self-discipline, and mental endurance. Every game is a personal challenge, demanding precision and emotional control rather than pure strength. I appreciated how small technical details could drastically change performance, reminding me of the value of consistency and self-improvement. It also offered a calm environment to reflect, concentrate, and set clear objectives — something I’ve carried over into my studies and professional work.
+        </p>
+      </div>
+      <div class="image">
+        <a href="#"><img src="golf.jpg" alt="Technical University of Munich - Main Campus" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+    </section>
+
+    <!-- Bloc 4 -->
+    <section class="mobility-section-2">
+      <div class="image">
+        <a href="#"><img src="weight.jpg" alt="DiscoverEU program travels" style="height: 300px;width: 500px; object-fit: cover;"></a>
+      </div>
+      <div class="text">
+        <h2>Weight Training (2024 – 2025)</h2>
+        <p>
+         I started weight training as a way to improve both my physical health and mental well-being. It quickly became a routine that strengthened my sense of discipline and determination. Each workout represents a challenge against myself — pushing limits, tracking progress, and staying committed over time. Beyond the physical transformation, the gym has helped me develop perseverance and balance, which have a positive impact on my productivity and focus in other areas of my life.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Bastien Labeste – All rights reserved.</p>
+  </footer>
+   <div id="retour-btn-container">
+    <a href="Mes_passions.html" id="retour-btn">Return</a>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+  <script>
+    // Toggle du menu via jQuery
+    $(document).ready(function() {
+      $('#menu-toggle').click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle();
+      });
+    });
+  </script>
+  <script> 
+    // Bouton scroll vers le haut
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
