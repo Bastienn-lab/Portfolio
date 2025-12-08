@@ -190,13 +190,13 @@ header nav a:hover {
 }
 
 .project-item {
-    width: 80%;
+    width: 82%;
     
     margin: 1.5%;
     position: relative;
     height: 80%; /* Définissez une hauteur fixe pour que toutes les images aient la même taille */
     overflow: hidden;
-    margin-right: -5.5%;
+    margin-right: 7.5%;
 }
 
 .project-item2 {
@@ -440,5 +440,6 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
 
 }
